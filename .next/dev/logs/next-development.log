@@ -1,0 +1,1409 @@
+[00:00:01.477] Server  LOG      ✓ Ready in 1020ms
+[00:04:16.141] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:16.141] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:04:16.141] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765172446617}
+[00:04:24.631] Browser WARN    Image with src "http://localhost:3000/images/foundation-banner.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:04:34.936] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765172465406}
+[00:08:33.565] Server  LOG      ✓ Compiled in 60ms
+[00:09:50.503] Server  LOG        Reload env: .env
+[00:09:56.262] Server  LOG        Reload env: .env
+[00:10:15.498] Server  LOG        Reload env: .env
+[00:10:17.342] Server  LOG        Reload env: .env
+[00:10:32.456] Server  LOG        Reload env: .env
+[00:10:34.410] Server  LOG        Reload env: .env
+[00:10:38.441] Server  LOG        Reload env: .env
+[00:10:41.490] Server  LOG        Reload env: .env
+[00:10:43.688] Server  LOG        Reload env: .env
+[00:10:51.330] Server  LOG        Reload env: .env
+[00:10:54.863] Server  LOG        Reload env: .env
+[00:10:57.241] Server  LOG        Reload env: .env
+[00:11:03.480] Server  LOG        Reload env: .env
+[00:11:09.472] Server  LOG        Reload env: .env
+[00:11:47.121] Server  LOG        Reload env: .env
+[00:11:49.974] Server  LOG        Reload env: .env
+[00:12:08.168] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:08.168] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team","route":"/team"}
+[00:12:08.168] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765172918634}
+[00:12:17.939] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/contact color: rgb(120, 120, 120) color: inherit {"dp":"/contact","o":"http://localhost:3000/contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765172928414}
+[00:12:56.129] Server  ERROR   [v0] Email send failed: {}
+[00:13:04.232] Server  ERROR   [v0] Email send failed: {}
+[00:13:15.048] Server  ERROR   [v0] Email send failed: {}
+[00:15:56.603] Server  LOG        Reload env: .env
+[00:17:22.610] Server  LOG      ✓ Compiled in 60ms
+[00:24:12.874] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765173643295}
+[00:30:37.646] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/contact color: rgb(120, 120, 120) color: inherit {"dp":"/contact","o":"http://localhost:3000/contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765174028035}
+[00:30:38.709] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765174029098}
+[00:31:16.765] Server  LOG      ✓ Compiled in 50ms
+[00:31:38.797] Server  LOG      ✓ Compiled in 57ms
+[00:31:44.540] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:44.540] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team","route":"/team"}
+[00:31:44.540] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765174094919}
+[00:31:54.619] Server  LOG      ✓ Compiled in 61ms
+[00:32:21.801] Server  LOG      ✓ Compiled in 46ms
+[00:32:45.472] Server  LOG      ✓ Compiled in 47ms
+[00:33:03.952] Server  LOG      ✓ Compiled in 46ms
+[00:33:05.925] Server  LOG      ✓ Compiled in 60ms
+[00:33:07.693] Server  LOG      ✓ Compiled in 47ms
+[00:33:24.265] Server  LOG      ✓ Compiled in 47ms
+[00:33:31.361] Server  LOG      ✓ Compiled in 69ms
+[00:35:21.328] Server  LOG      ✓ Compiled in 83ms
+[00:35:31.870] Server  LOG      ✓ Compiled in 49ms
+[00:38:53.194] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/contact color: rgb(120, 120, 120) color: inherit {"dp":"/contact","o":"http://localhost:3000/contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765174523546}
+[00:45:11.890] Server  LOG      ✓ Compiled in 133ms
+[00:45:17.437] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765174907678}
+[00:46:29.204] Server  LOG      ✓ Compiled in 50ms
+[00:46:32.981] Server  LOG      ✓ Compiled in 48ms
+[00:46:36.210] Server  LOG      ✓ Compiled in 49ms
+[00:46:39.006] Server  LOG      ✓ Compiled in 50ms
+[00:46:42.183] Server  LOG      ✓ Compiled in 50ms
+[00:47:28.799] Server  LOG      ✓ Compiled in 54ms
+[00:47:34.589] Server  LOG      ✓ Compiled in 52ms
+[00:47:44.847] Server  LOG      ✓ Compiled in 58ms
+[00:47:49.101] Server  LOG      ✓ Compiled in 51ms
+[00:47:51.506] Server  LOG      ✓ Compiled in 52ms
+[00:47:59.230] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:47:59.230] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team","route":"/team"}
+[00:47:59.230] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765175069543}
+[00:48:28.579] Server  LOG      ✓ Compiled in 48ms
+[00:49:05.657] Server  LOG      ✓ Compiled in 79ms
+[00:49:08.535] Server  LOG      ✓ Compiled in 59ms
+[00:49:12.932] Server  LOG      ✓ Compiled in 46ms
+[00:49:13.966] Server  LOG      ✓ Compiled in 63ms
+[00:49:40.910] Server  LOG      ✓ Compiled in 53ms
+[00:49:48.823] Server  LOG      ✓ Compiled in 48ms
+[00:49:51.613] Server  LOG      ✓ Compiled in 58ms
+[00:49:59.844] Server  LOG      ✓ Compiled in 47ms
+[00:50:05.899] Server  LOG      ✓ Compiled in 50ms
+[00:51:21.744] Server  LOG      ✓ Compiled in 49ms
+[00:51:32.947] Server  LOG      ✓ Compiled in 50ms
+[00:51:36.932] Server  LOG      ✓ Compiled in 52ms
+[00:51:41.690] Server  LOG      ✓ Compiled in 48ms
+[00:52:13.126] Server  LOG      ✓ Compiled in 93ms
+[00:52:16.969] Server  LOG      ✓ Compiled in 51ms
+[00:52:20.293] Server  LOG      ✓ Compiled in 52ms
+[00:52:31.015] Server  LOG      ✓ Compiled in 45ms
+[00:54:29.709] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765175459993}
+[00:54:32.079] Browser WARN    Image with src "http://localhost:3000/images/foundation-banner.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:54:39.715] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765175470008}
+[00:54:56.622] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765175486902}
+[00:55:10.144] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-work color: rgb(120, 120, 120) color: inherit {"dp":"/our-work","o":"http://localhost:3000/our-work","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765175500424}
+[00:55:19.641] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765175509856}
+[00:56:09.615] Server  LOG      ✓ Compiled in 75ms
+[00:56:09.728] Browser ERROR   ./app/team/page.tsx:67:6
+Parsing ecmascript source code failed
+  65 |     
+  66 |       ]
+> 67 |     },
+     |      ^
+  68 |   ]
+  69 |
+  70 |   const districtTeam = [
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/team/page.tsx [Client Component Browser]
+    ./app/team/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/team/page.tsx [Client Component SSR]
+    ./app/team/page.tsx [Server Component]
+[00:56:29.020] Server  LOG      ✓ Compiled in 73ms
+[00:57:15.033] Server  LOG      ✓ Compiled in 54ms
+[00:57:21.067] Server  LOG      ✓ Compiled in 57ms
+[00:57:49.563] Server  LOG      ✓ Compiled in 51ms
+[00:57:56.807] Server  LOG      ✓ Compiled in 54ms
+[00:57:59.105] Server  LOG      ✓ Compiled in 47ms
+[00:58:19.305] Server  LOG      ✓ Compiled in 56ms
+[00:58:26.347] Server  LOG      ✓ Compiled in 54ms
+[00:58:29.858] Server  LOG      ✓ Compiled in 51ms
+[00:58:34.069] Server  LOG      ✓ Compiled in 49ms
+[00:58:36.157] Server  LOG      ✓ Compiled in 64ms
+[00:59:35.910] Server  LOG      ✓ Compiled in 51ms
+[01:00:48.551] Server  LOG      ✓ Compiled in 55ms
+[01:01:07.301] Server  LOG      ✓ Compiled in 70ms
+[01:02:25.221] Server  LOG      ✓ Compiled in 62ms
+[01:02:28.469] Server  LOG      ✓ Compiled in 53ms
+[01:02:38.258] Server  LOG      ✓ Compiled in 46ms
+[01:02:50.399] Server  LOG      ✓ Compiled in 52ms
+[01:02:56.980] Server  LOG      ✓ Compiled in 50ms
+[01:14:17.673] Server  LOG      ✓ Compiled in 305ms
+[01:16:07.175] Server  LOG      ✓ Compiled in 179ms
+[01:16:27.159] Server  LOG      ✓ Compiled in 142ms
+[01:16:27.300] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:16:35.034] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:16:35.039] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:16:35.895] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:17:46.534] Server  LOG      ✓ Compiled in 157ms
+[01:17:46.557] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:17:46.787] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:17:46.788] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:17:47.798] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:17:47.799] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:17:47.817] Server  LOG      ✓ Compiled in 178ms
+[01:17:48.069] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:17:48.070] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:17:49.238] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:18:48.315] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:18:48.318] Server  LOG      ✓ Compiled in 135ms
+[01:18:48.707] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:18:48.708] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:18:50.240] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:18:51.028] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:18:51.030] Server  LOG      ✓ Compiled in 141ms
+[01:18:51.301] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:18:51.301] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:18:52.250] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:18:53.013] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:18:53.031] Server  LOG      ✓ Compiled in 152ms
+[01:18:53.263] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:18:53.264] Server  ERROR    ⨯ ReferenceError: Star is not defined
+[01:18:54.242] Browser ERROR   uncaughtError: ReferenceError: Star is not defined
+[01:19:04.999] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:19:05.283] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:19:05.285] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:19:05.311] Server  LOG      ✓ Compiled in 134ms
+[01:19:06.247] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:19:07.450] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:19:07.466] Server  LOG      ✓ Compiled in 130ms
+[01:19:07.636] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:19:07.637] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:19:08.239] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:19:08.908] Server  LOG      ✓ Compiled in 172ms
+[01:19:09.244] Browser ERROR   ./app/team/page.tsx:88:3
+Parsing ecmascript source code failed
+  86 |     },
+  87 |     
+> 88 |   const districtTeams = {
+     |   ^^^^^
+  89 |     "Gautam Budh Nagar": [
+  90 |       {
+  91 |         name: "Yogi Sharma",
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/team/page.tsx [Client Component Browser]
+    ./app/team/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/team/page.tsx [Client Component SSR]
+    ./app/team/page.tsx [Server Component]
+[01:19:13.217] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:19:13.304] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:19:13.306] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:19:14.248] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:19:14.726] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:19:14.739] Server  LOG      ✓ Compiled in 166ms
+[01:19:15.053] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:19:15.054] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:19:16.247] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:19:19.219] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:19:19.237] Server  LOG      ✓ Compiled in 128ms
+[01:19:19.484] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:19:19.485] Server  ERROR    ⨯ ReferenceError: districtTeams is not defined
+[01:19:20.243] Browser ERROR   uncaughtError: ReferenceError: districtTeams is not defined
+[01:19:20.892] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:19:20.893] Server  LOG      ✓ Compiled in 153ms
+[01:19:21.380] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:19:21.382] Server  ERROR    ⨯ ReferenceError: Star is not defined
+[01:19:22.243] Browser ERROR   uncaughtError: ReferenceError: Star is not defined
+[01:19:54.133] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:19:54.150] Server  LOG      ✓ Compiled in 167ms
+[01:19:54.613] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\_4534bdce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:19:54.616] Server  ERROR    ⨯ ReferenceError: Star is not defined
+[01:19:55.235] Browser ERROR   uncaughtError: ReferenceError: Star is not defined
+[01:20:13.257] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:20:13.264] Server  LOG      ✓ Compiled in 216ms
+[01:20:15.240] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:20:15.240] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team","route":"/team"}
+[01:20:15.240] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765177005265}
+[01:21:21.109] Server  LOG      ✓ Compiled in 176ms
+[01:21:24.591] Server  LOG      ✓ Compiled in 160ms
+[01:21:26.917] Server  LOG      ✓ Compiled in 206ms
+[01:21:31.294] Server  LOG      ✓ Compiled in 145ms
+[01:21:33.808] Server  LOG      ✓ Compiled in 152ms
+[01:21:37.313] Server  LOG      ✓ Compiled in 143ms
+[01:21:39.995] Server  LOG      ✓ Compiled in 117ms
+[01:21:42.784] Server  LOG      ✓ Compiled in 135ms
+[01:21:45.809] Server  LOG      ✓ Compiled in 140ms
+[01:21:48.693] Server  LOG      ✓ Compiled in 119ms
+[01:21:51.386] Server  LOG      ✓ Compiled in 170ms
+[01:28:31.741] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.746] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.752] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.757] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.763] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.768] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.772] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.781] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.786] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.789] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.794] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.798] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.803] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.808] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.813] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.820] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.824] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.829] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.834] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.838] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.843] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.847] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.851] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.856] Server  ERROR    ⨯ ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:28:31.864] Server  LOG      ✓ Compiled in 131ms
+[01:28:32.238] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:28:32.238] Browser ERROR   ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:28:33.243] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:28:33.243] Browser ERROR   ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:29:00.313] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:00.313] Browser ERROR   ./app/page.tsx:42:1
+Module not found: Can't resolve 'framer-motion'
+  40 | } from "lucide-react"
+  41 | import { useEffect, useState } from "react"
+> 42 | import { motion } from "framer-motion"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43 |
+  44 | export default function Home() {
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:29:02.236] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:02.236] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:02.236] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:03.250] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:18.037] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:18.753] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:18.753] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:19.590] Browser ERROR   uncaughtError: Error: ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[01:29:19.803] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:19.803] Browser ERROR   ./app/page.tsx:44:25
+Ecmascript file had an error
+  42 | import { motion } from "framer-motion"
+  43 |
+> 44 | export default function Home() {
+     |                         ^^^^
+  45 |   const [isLoaded, setIsLoaded] = useState(false)
+  46 |
+  47 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:29:26.750] Server  LOG      ✓ Compiled in 65ms
+[01:29:27.271] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:29:27.271] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team","route":"/team"}
+[01:29:27.271] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765177557479}
+[01:29:33.523] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765177563713}
+[01:31:01.270] Server  LOG      ✓ Compiled in 54ms
+[01:31:05.736] Server  LOG      ✓ Compiled in 52ms
+[01:40:22.206] Server  LOG      ✓ Compiled in 281ms
+[01:40:23.242] Browser ERROR   ./app/page.tsx:59:25
+Ecmascript file had an error
+  57 | import { motion } from "framer-motion"
+  58 |
+> 59 | export default function Home() {
+     |                         ^^^^
+  60 |   const [isLoaded, setIsLoaded] = useState(false)
+  61 |
+  62 |   useEffect(() => {
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:41:40.017] Server  LOG      ✓ Compiled in 136ms
+[01:41:43.096] Server  LOG      ✓ Compiled in 128ms
+[01:41:46.161] Server  LOG      ✓ Compiled in 198ms
+[01:41:50.064] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765178300250}
+[01:41:51.489] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765178301575}
+[01:42:06.736] Server  LOG      ✓ Compiled in 187ms
+[01:42:08.526] Server  LOG      ✓ Compiled in 168ms
+[01:42:13.855] Server  LOG      ✓ Compiled in 194ms
+[01:42:20.350] Server  LOG      ✓ Compiled in 157ms
+[01:43:01.529] Server  LOG      ✓ Compiled in 233ms
+[01:43:15.404] Server  LOG      ✓ Compiled in 146ms
+[01:43:25.926] Server  LOG      ✓ Compiled in 222ms
+[01:46:05.910] Server  LOG      ✓ Compiled in 74ms
+[01:46:31.294] Server  LOG      ✓ Compiled in 159ms
+[01:47:30.912] Server  LOG      ✓ Compiled in 121ms
+[01:47:46.567] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:47:46.567] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:47:46.567] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765178656745}
+[01:49:18.983] Server  LOG      ✓ Compiled in 218ms
+[01:49:26.235] Server  LOG      ✓ Compiled in 124ms
+[01:49:33.088] Server  LOG      ✓ Compiled in 107ms
+[01:49:36.984] Server  LOG      ✓ Compiled in 174ms
+[01:49:44.154] Server  LOG      ✓ Compiled in 152ms
+[01:49:51.764] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:49:51.764] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:49:51.764] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765178781942}
+[01:50:17.394] Server  LOG      ✓ Compiled in 201ms
+[01:50:18.604] Server  LOG      ✓ Compiled in 230ms
+[01:50:35.548] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:50:35.548] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:50:35.548] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765178825729}
+[01:51:08.289] Server  LOG      ✓ Compiled in 141ms
+[01:51:19.476] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:51:19.476] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:51:19.476] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765178869651}
+[01:52:22.598] Server  LOG      ✓ Compiled in 83ms
+[01:52:41.717] Server  LOG      ✓ Compiled in 191ms
+[01:52:47.846] Server  LOG      ✓ Compiled in 217ms
+[01:52:53.633] Server  LOG      ✓ Compiled in 128ms
+[01:53:58.338] Server  LOG      ✓ Compiled in 180ms
+[01:53:59.861] Server  LOG      ✓ Compiled in 119ms
+[01:54:04.258] Server  LOG      ✓ Compiled in 156ms
+[01:54:05.798] Server  LOG      ✓ Compiled in 147ms
+[01:54:06.899] Server  LOG      ✓ Compiled in 95ms
+[01:54:09.551] Server  LOG      ✓ Compiled in 146ms
+[01:54:11.135] Server  LOG      ✓ Compiled in 144ms
+[01:55:42.759] Server  LOG      ✓ Compiled in 179ms
+[01:55:44.093] Server  LOG      ✓ Compiled in 155ms
+[01:55:45.992] Server  LOG      ✓ Compiled in 132ms
+[01:55:49.772] Server  LOG      ✓ Compiled in 158ms
+[01:55:56.294] Server  LOG      ✓ Compiled in 145ms
+[01:56:02.436] Server  LOG      ✓ Compiled in 95ms
+[01:56:03.844] Server  LOG      ✓ Compiled in 86ms
+[01:56:05.950] Server  LOG      ✓ Compiled in 131ms
+[01:56:15.683] Server  LOG      ✓ Compiled in 85ms
+[01:56:17.774] Server  LOG      ✓ Compiled in 115ms
+[01:56:19.930] Server  LOG      ✓ Compiled in 112ms
+[01:56:33.969] Server  LOG      ✓ Compiled in 112ms
+[01:56:37.050] Server  LOG      ✓ Compiled in 148ms
+[01:56:49.156] Server  LOG      ✓ Compiled in 116ms
+[01:56:51.284] Server  LOG      ✓ Compiled in 137ms
+[01:56:55.428] Server  LOG      ✓ Compiled in 145ms
+[01:57:08.533] Server  LOG      ✓ Compiled in 135ms
+[01:57:42.417] Server  LOG      ✓ Compiled in 135ms
+[01:58:47.728] Server  LOG      ✓ Compiled in 194ms
+[01:59:47.086] Server  LOG      ✓ Compiled in 198ms
+[01:59:47.348] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[01:59:47.348] Browser ERROR   Image is missing required "src" property: <img>
+[01:59:49.935] Server  LOG      ✓ Compiled in 140ms
+[01:59:50.119] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[01:59:50.119] Browser ERROR   Image is missing required "src" property: <img>
+[01:59:54.214] Server  LOG      ✓ Compiled in 124ms
+[01:59:54.438] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[01:59:54.438] Browser ERROR   Image is missing required "src" property: <img>
+[02:00:18.994] Server  LOG      ✓ Compiled in 164ms
+[02:00:52.916] Server  LOG      ✓ Compiled in 107ms
+[02:00:53.132] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[02:00:53.132] Browser ERROR   Image is missing required "src" property: <img>
+[02:01:20.394] Server  LOG      ✓ Compiled in 180ms
+[02:01:43.715] Server  LOG      ✓ Compiled in 214ms
+[02:01:44.044] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[02:01:44.044] Browser ERROR   Image is missing required "src" property: <img>
+[02:01:44.044] Browser ERROR   Image is missing required "src" property: <img>
+[02:02:00.245] Server  LOG      ✓ Compiled in 122ms
+[02:02:02.869] Server  LOG      ✓ Compiled in 193ms
+[02:02:09.437] Server  LOG      ✓ Compiled in 127ms
+[02:02:15.643] Server  LOG      ✓ Compiled in 166ms
+[02:02:23.100] Server  LOG      ✓ Compiled in 148ms
+[02:02:36.798] Server  LOG      ✓ Compiled in 149ms
+[02:04:29.689] Server  LOG      ✓ Compiled in 197ms
+[02:05:18.731] Server  LOG      ✓ Compiled in 103ms
+[02:05:43.321] Server  LOG      ✓ Compiled in 204ms
+[02:05:52.653] Server  LOG      ✓ Compiled in 148ms
+[02:05:56.274] Server  LOG      ✓ Compiled in 147ms
+[02:06:17.761] Server  LOG      ✓ Compiled in 232ms
+[02:06:22.117] Server  LOG      ✓ Compiled in 160ms
+[02:06:26.460] Server  LOG      ✓ Compiled in 142ms
+[02:06:30.033] Server  LOG      ✓ Compiled in 159ms
+[02:06:45.929] Server  LOG      ✓ Compiled in 179ms
+[02:06:54.514] Server  LOG      ✓ Compiled in 209ms
+[02:07:01.824] Server  LOG      ✓ Compiled in 195ms
+[02:07:05.804] Server  LOG      ✓ Compiled in 203ms
+[02:08:27.882] Server  LOG      ✓ Compiled in 133ms
+[02:14:53.256] Server  LOG      ✓ Compiled in 133ms
+[02:14:58.210] Server  LOG      ✓ Compiled in 143ms
+[02:17:46.698] Server  LOG      ✓ Compiled in 223ms
+[02:17:55.723] Server  LOG      ✓ Compiled in 173ms
+[02:18:05.382] Server  LOG      ✓ Compiled in 202ms
+[02:18:15.040] Server  LOG      ✓ Compiled in 143ms
+[02:18:55.031] Server  LOG      ✓ Compiled in 148ms
+[02:18:56.641] Server  LOG      ✓ Compiled in 140ms
+[02:19:20.182] Server  LOG      ✓ Compiled in 202ms
+[02:20:45.434] Server  LOG      ✓ Compiled in 197ms
+[02:20:52.970] Server  LOG      ✓ Compiled in 126ms
+[02:21:10.980] Server  LOG      ✓ Compiled in 193ms
+[02:21:13.536] Server  LOG      ✓ Compiled in 95ms
+[02:23:41.256] Server  LOG      ✓ Compiled in 135ms
+[02:23:44.788] Server  LOG      ✓ Compiled in 146ms
+[02:23:48.610] Server  LOG      ✓ Compiled in 118ms
+[02:24:40.279] Server  LOG      ✓ Compiled in 158ms
+[02:24:40.396] Browser ERROR   ./app/page.tsx:511:1
+Parsing ecmascript source code failed
+  509 |                 { image: "/images/our-work-4.png", title: "Women Empowerment", category: "Community" },
+  510 |                 { image: "/images/team-award.png", title: "Youth Workshop", category: "Education" },
+> 511 | /              ].map((work, index) => (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  512 |                 <motion.div
+  513 |                   key={index}
+  514 |                   initial={{ opacity: 0, y: 20 }}
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[02:25:03.307] Server  LOG      ✓ Compiled in 192ms
+[02:25:08.000] Server  LOG      ✓ Compiled in 202ms
+[02:25:12.500] Server  LOG      ✓ Compiled in 214ms
+[02:25:17.246] Server  LOG      ✓ Compiled in 193ms
+[02:25:22.287] Server  LOG      ✓ Compiled in 211ms
+[02:25:33.027] Server  LOG      ✓ Compiled in 161ms
+[02:26:05.781] Server  LOG      ✓ Compiled in 108ms
+[02:28:15.667] Server  LOG      ✓ Compiled in 176ms
+[02:28:44.710] Server  LOG      ✓ Compiled in 147ms
+[02:28:46.167] Server  LOG      ✓ Compiled in 211ms
+[02:29:05.955] Server  LOG      ✓ Compiled in 195ms
+[02:29:06.076] Browser ERROR   ./app/page.tsx:302:26
+Parsing ecmascript source code failed
+  300 |                 </Link>
+  301 |               </div> */}
+> 302 |             </motion.div>
+      |                          ^
+> 303 |           </div> */}
+      | ^^^^^^^^^^^
+  304 |           
+  305 |           {/* Banner Navigation */}
+  306 |           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+
+Expected '</', got 'jsx text (
+          )'
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[02:29:09.096] Server  LOG      ✓ Compiled in 207ms
+[02:29:29.943] Server  LOG      ✓ Compiled in 224ms
+[02:29:30.046] Browser ERROR   ./app/page.tsx:302:26
+Parsing ecmascript source code failed
+  300 |                 </Link>
+  301 |               </div> */}
+> 302 |             </motion.div>
+      |                          ^
+> 303 |           </div> */}
+      | ^^^^^^^^^^^
+  304 |           
+  305 |           {/* Banner Navigation */}
+  306 |           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+
+Expected '</', got 'jsx text (
+          )'
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[02:29:41.912] Server  LOG      ✓ Compiled in 239ms
+[02:29:42.030] Browser ERROR   ./app/page.tsx:303:24
+Parsing ecmascript source code failed
+  301 |               </div> */}
+  302 |             {/* </motion.div>
+> 303 |           </div> */} */}
+      |                        ^
+  304 |           
+  305 |           {/* Banner Navigation */}
+  306 |           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[02:29:43.013] Browser ERROR   ./app/page.tsx:303:24
+Parsing ecmascript source code failed
+  301 |               </div> */}
+  302 |             {/* </motion.div>
+> 303 |           </div> */} */}
+      |                        ^
+  304 |           
+  305 |           {/* Banner Navigation */}
+  306 |           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[02:37:59.794] Server  LOG      ✓ Compiled in 183ms
+[02:38:26.236] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765181696368}
+[02:40:18.636] Server  LOG      ✓ Compiled in 118ms
+[02:40:23.688] Server  LOG      ✓ Compiled in 113ms
+[02:40:30.866] Server  LOG      ✓ Compiled in 176ms
+[02:40:32.516] Server  LOG      ✓ Compiled in 139ms
+[02:40:39.081] Server  LOG      ✓ Compiled in 147ms
+[02:41:53.399] Server  LOG      ✓ Compiled in 148ms
+[02:42:42.239] Server  LOG      ✓ Compiled in 147ms
