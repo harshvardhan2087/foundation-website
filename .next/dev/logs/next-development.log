@@ -1,14 +1,1316 @@
-[00:00:03.505] Server  LOG      ✓ Ready in 2.2s
-[00:00:17.305] Server  LOG      ○ Compiling / ...
-[00:00:26.213] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:26.213] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:26.213] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765559534942}
-[00:03:30.080] Server  LOG      ✓ Compiled in 285ms
-[00:03:58.142] Browser WARN    Image with src "/images/asf-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:03:58.474] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:03:58.474] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:03:58.474] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765559747200}
-[00:04:11.671] Server  LOG      ✓ Compiled in 170ms
-[00:05:05.834] Server  LOG      ✓ Compiled in 306ms
-[00:06:26.842] Server  LOG      ✓ Compiled in 299ms
+[00:00:02.274] Server  LOG      ✓ Ready in 1460ms
+[00:00:05.411] Server  LOG      ○ Compiling /dashboard/team ...
+[00:00:06.060] Browser ERROR   uncaughtError: Error: Invalid src prop (https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766508967044_k331y8kwxoq_Screenshot_2025-12-04_122105.png?alt=media&token=8dfc844b-4d45-4af7-bf07-97535cc2ba4e) on `next/image`, hostname "firebasestorage.googleapis.com" is not configured under images in your `next.config.js`
+See more info: https://nextjs.org/docs/messages/next-image-unconfigured-host
+[00:00:09.408] Browser LOG     Fetching banners from Firestore...
+[00:00:09.409] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:09.409] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:09.409] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510259589}
+[00:00:10.154] Browser LOG     Found 0 banners
+[00:00:10.154] Browser LOG     ✅ 0 active banners loaded successfully
+[00:00:10.154] Browser LOG     No active banners found, using fallback
+[00:00:10.154] Browser LOG     Fetching banners from Firestore...
+[00:00:10.154] Browser LOG     Found 0 banners
+[00:00:10.154] Browser LOG     ✅ 0 active banners loaded successfully
+[00:00:10.154] Browser LOG     No active banners found, using fallback
+[00:00:11.259] Browser LOG     Loading team members from Firestore...
+[00:00:11.259] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:11.259] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[00:00:11.259] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510259982}
+[00:00:11.259] Browser LOG     ✅ Loaded 1 team members
+[00:00:11.259] Browser LOG     Loading menu items from Firestore...
+[00:00:11.259] Browser LOG     ✅ Loaded 5 menu items
+[00:00:11.259] Browser LOG     🔄 Setting up Firestore real-time listener...
+[00:00:11.259] Browser LOG     🔄 Setting up menu items real-time listener...
+[00:00:19.508] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:19.509] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team/YAevThN29w5ABFCs24f3","route":"/team/YAevThN29w5ABFCs24f3"}
+[00:00:19.509] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/YAevThN29w5ABFCs24f3 color: rgb(120, 120, 120) color: inherit {"dp":"/team/YAevThN29w5ABFCs24f3","o":"http://localhost:3000/team/YAevThN29w5ABFCs24f3","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510269690}
+[00:00:22.423] Browser LOG     Fetching banners from Firestore...
+[00:00:22.423] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:22.423] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:22.423] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510272604}
+[00:00:22.898] Browser LOG     Found 0 banners
+[00:00:22.898] Browser LOG     ✅ 0 active banners loaded successfully
+[00:00:22.898] Browser LOG     No active banners found, using fallback
+[00:00:22.898] Browser LOG     Fetching banners from Firestore...
+[00:00:22.898] Browser LOG     Found 0 banners
+[00:00:22.898] Browser LOG     ✅ 0 active banners loaded successfully
+[00:00:22.898] Browser LOG     No active banners found, using fallback
+[00:00:27.519] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:27.519] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team/YAevThN29w5ABFCs24f3","route":"/team/YAevThN29w5ABFCs24f3"}
+[00:00:27.519] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/YAevThN29w5ABFCs24f3 color: rgb(120, 120, 120) color: inherit {"dp":"/team/YAevThN29w5ABFCs24f3","o":"http://localhost:3000/team/YAevThN29w5ABFCs24f3","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510277697}
+[00:00:30.050] Browser LOG     Fetching banners from Firestore...
+[00:00:30.050] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:30.050] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:30.050] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510280223}
+[00:00:30.500] Browser LOG     Found 0 banners
+[00:00:30.500] Browser LOG     ✅ 0 active banners loaded successfully
+[00:00:30.500] Browser LOG     No active banners found, using fallback
+[00:00:30.500] Browser LOG     Fetching banners from Firestore...
+[00:00:30.500] Browser LOG     Found 0 banners
+[00:00:30.500] Browser LOG     ✅ 0 active banners loaded successfully
+[00:00:30.500] Browser LOG     No active banners found, using fallback
+[00:01:03.010] Server  LOG      ✓ Compiled in 160ms
+[00:01:08.636] Browser LOG     Fetching banners from Firestore...
+[00:01:08.636] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:08.636] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:08.636] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510318810}
+[00:01:09.231] Browser LOG     Found 0 banners
+[00:01:09.231] Browser LOG     ✅ 0 active banners loaded successfully
+[00:01:09.231] Browser LOG     No active banners found, using fallback
+[00:01:09.231] Browser LOG     Fetching banners from Firestore...
+[00:01:09.231] Browser LOG     Found 0 banners
+[00:01:09.231] Browser LOG     ✅ 0 active banners loaded successfully
+[00:01:09.231] Browser LOG     No active banners found, using fallback
+[00:09:15.938] Server  LOG      ✓ Compiled in 253ms
+[00:09:55.142] Server  LOG      ✓ Compiled in 118ms
+[00:09:58.689] Server  LOG      ✓ Compiled in 286ms
+[00:10:25.460] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.470] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.480] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.494] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.512] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.524] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.535] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.548] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.562] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.575] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.588] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.595] Server  ERROR    ⨯ ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:10:25.601] Server  LOG      ✓ Compiled in 259ms
+[00:10:26.263] Browser ERROR   ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:10:26.263] Browser ERROR   ./components/navigation.tsx:7:1
+Module not found: Can't resolve '@/lib/teamService'
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+Import map: aliased to relative './lib/teamService' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:10:51.702] Server  LOG      ✓ Compiled in 165ms
+[00:10:52.261] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:10:52.261] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:10:52.262] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:10:52.262] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:10:54.786] Server  LOG      ✓ Compiled in 218ms
+[00:11:11.287] Server  LOG      ✓ Compiled in 195ms
+[00:11:14.057] Server  LOG      ✓ Compiled in 204ms
+[00:11:17.127] Server  LOG      ✓ Compiled in 113ms
+[00:11:17.256] Browser ERROR   ./components/navigation.tsx:10:1
+Parsing ecmascript source code failed
+   8 | import get
+   9 |
+> 10 | interface MenuItem {
+     | ^^^^^^^^^
+  11 |   id: string
+  12 |   title: string
+  13 |   type: "main" | "submenu"
+
+Expected ',', got 'interface'
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:11:17.256] Browser ERROR   ./components/navigation.tsx:10:1
+Parsing ecmascript source code failed
+   8 | import get
+   9 |
+> 10 | interface MenuItem {
+     | ^^^^^^^^^
+  11 |   id: string
+  12 |   title: string
+  13 |   type: "main" | "submenu"
+
+Expected ',', got 'interface'
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:11:20.254] Browser ERROR   ./components/navigation.tsx:10:1
+Parsing ecmascript source code failed
+   8 | import getMenu
+   9 |
+> 10 | interface MenuItem {
+     | ^^^^^^^^^
+  11 |   id: string
+  12 |   title: string
+  13 |   type: "main" | "submenu"
+
+Expected ',', got 'interface'
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:11:20.254] Browser ERROR   ./components/navigation.tsx:10:1
+Parsing ecmascript source code failed
+   8 | import getMenu
+   9 |
+> 10 | interface MenuItem {
+     | ^^^^^^^^^
+  11 |   id: string
+  12 |   title: string
+  13 |   type: "main" | "submenu"
+
+Expected ',', got 'interface'
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:11:25.214] Server  LOG      ✓ Compiled in 133ms
+[00:12:18.118] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:18.120] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:18.123] Server  WARN    Error: Route "/team/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:12:18.228] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_@firebase_firestore_dist_index_node_mjs_8083fcce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:18.230] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:18.232] Server  ERROR   Error getting menu: TypeError: Cannot read properties of undefined (reading 'indexOf')
+[00:12:18.243] Server  ERROR   Error getting team members: FirebaseError: [code=invalid-argument]: Function where() called with invalid data. Unsupported field value: undefined
+[00:12:18.247] Server  ERROR   Error getting child menus: FirebaseError: [code=invalid-argument]: Function where() called with invalid data. Unsupported field value: undefined
+[00:12:18.303] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:18.306] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:18.312] Server  WARN    Error: Route "/team/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:12:18.318] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_@firebase_firestore_dist_index_node_mjs_8083fcce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:18.321] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:18.323] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:18.328] Server  ERROR   Error getting menu: TypeError: Cannot read properties of undefined (reading 'indexOf')
+[00:12:18.598] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/YAevThN29w5ABFCs24f3 color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/YAevThN29w5ABFCs24f3","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510988774}
+[00:12:23.058] Browser LOG     Fetching banners from Firestore...
+[00:12:23.058] Browser LOG     [2;38;2;124;124;124m%s[0m Fetching banners from Firestore...
+[00:12:23.058] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510993039}
+[00:12:23.058] Browser LOG     Found 0 banners
+[00:12:23.058] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:23.058] Browser LOG     No active banners found, using fallback
+[00:12:23.058] Browser LOG     Found 0 banners
+[00:12:23.059] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:23.059] Browser LOG     No active banners found, using fallback
+[00:12:23.059] Browser LOG     Fetching banners from Firestore...
+[00:12:23.059] Browser LOG     Found 0 banners
+[00:12:23.059] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:23.059] Browser LOG     No active banners found, using fallback
+[00:12:26.337] Browser LOG     Fetching banners from Firestore...
+[00:12:26.337] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:26.337] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:26.337] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766510996516}
+[00:12:26.936] Browser LOG     Found 0 banners
+[00:12:26.936] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:26.936] Browser LOG     No active banners found, using fallback
+[00:12:26.936] Browser LOG     Fetching banners from Firestore...
+[00:12:26.937] Browser LOG     Found 0 banners
+[00:12:26.937] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:26.937] Browser LOG     No active banners found, using fallback
+[00:12:32.346] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:32.348] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:32.349] Server  WARN    Error: Route "/team/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:12:32.354] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_@firebase_firestore_dist_index_node_mjs_8083fcce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:32.356] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:32.358] Server  ERROR   Error getting menu: TypeError: Cannot read properties of undefined (reading 'indexOf')
+[00:12:32.363] Server  ERROR   Error getting team members: FirebaseError: [code=invalid-argument]: Function where() called with invalid data. Unsupported field value: undefined
+[00:12:32.366] Server  ERROR   Error getting child menus: FirebaseError: [code=invalid-argument]: Function where() called with invalid data. Unsupported field value: undefined
+[00:12:32.417] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:32.419] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:32.422] Server  WARN    Error: Route "/team/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:12:32.427] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_@firebase_firestore_dist_index_node_mjs_8083fcce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:32.429] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:32.431] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:32.434] Server  ERROR   Error getting menu: TypeError: Cannot read properties of undefined (reading 'indexOf')
+[00:12:32.693] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/YAevThN29w5ABFCs24f3 color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/YAevThN29w5ABFCs24f3","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511002871}
+[00:12:36.578] Browser LOG     Fetching banners from Firestore...
+[00:12:36.578] Browser LOG     [2;38;2;124;124;124m%s[0m Fetching banners from Firestore...
+[00:12:36.578] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511006645}
+[00:12:36.578] Browser LOG     Found 0 banners
+[00:12:36.578] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:36.578] Browser LOG     No active banners found, using fallback
+[00:12:36.578] Browser LOG     Found 0 banners
+[00:12:36.578] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:36.578] Browser LOG     No active banners found, using fallback
+[00:12:36.578] Browser LOG     Fetching banners from Firestore...
+[00:12:36.578] Browser LOG     Found 0 banners
+[00:12:36.578] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:36.578] Browser LOG     No active banners found, using fallback
+[00:12:41.148] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:41.150] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:41.152] Server  WARN    Error: Route "/team/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:12:41.163] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_@firebase_firestore_dist_index_node_mjs_8083fcce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:41.165] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:41.166] Server  ERROR   Error getting menu: TypeError: Cannot read properties of undefined (reading 'indexOf')
+[00:12:41.171] Server  ERROR   Error getting team members: FirebaseError: [code=invalid-argument]: Function where() called with invalid data. Unsupported field value: undefined
+[00:12:41.175] Server  ERROR   Error getting child menus: FirebaseError: [code=invalid-argument]: Function where() called with invalid data. Unsupported field value: undefined
+[00:12:41.218] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:41.221] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:41.225] Server  WARN    Error: Route "/team/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:12:41.235] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_@firebase_firestore_dist_index_node_mjs_8083fcce._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:41.239] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:41.241] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:12:41.245] Server  ERROR   Error getting menu: TypeError: Cannot read properties of undefined (reading 'indexOf')
+[00:12:41.457] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/gOnIeIRnueZ8Gxe27qXr color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/gOnIeIRnueZ8Gxe27qXr","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511011627}
+[00:12:44.601] Browser LOG     Fetching banners from Firestore...
+[00:12:44.601] Browser LOG     [2;38;2;124;124;124m%s[0m Fetching banners from Firestore...
+[00:12:44.601] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511014613}
+[00:12:44.601] Browser LOG     Found 0 banners
+[00:12:44.601] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:44.601] Browser LOG     No active banners found, using fallback
+[00:12:44.601] Browser LOG     Found 0 banners
+[00:12:44.602] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:44.602] Browser LOG     No active banners found, using fallback
+[00:12:44.602] Browser LOG     Fetching banners from Firestore...
+[00:12:44.602] Browser LOG     Found 0 banners
+[00:12:44.602] Browser LOG     ✅ 0 active banners loaded successfully
+[00:12:44.602] Browser LOG     No active banners found, using fallback
+[00:17:48.666] Server  LOG      ✓ Compiled in 129ms
+[00:17:49.253] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-client] (ecmascript).
+Did you mean to import getMenuById?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:49.253] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-ssr] (ecmascript).
+Did you mean to import getMenuById?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:55.381] Server  LOG      ✓ Compiled in 219ms
+[00:17:56.973] Server  LOG      ✓ Compiled in 152ms
+[00:17:57.254] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-client] (ecmascript).
+Did you mean to import getMenuById?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:57.254] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-ssr] (ecmascript).
+Did you mean to import getMenuById?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:42.144] Server  LOG      ✓ Compiled in 294ms
+[00:19:10.986] Browser LOG     Fetching banners from Firestore...
+[00:19:10.986] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:10.986] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:19:10.986] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511401153}
+[00:19:11.992] Browser ERROR   Error getting main menus: {"code":"failed-precondition","name":"FirebaseError"}
+[00:19:11.992] Browser LOG     Found 0 banners
+[00:19:11.992] Browser LOG     ✅ 0 active banners loaded successfully
+[00:19:11.992] Browser LOG     No active banners found, using fallback
+[00:19:11.992] Browser LOG     Fetching banners from Firestore...
+[00:19:11.992] Browser LOG     Found 0 banners
+[00:19:11.992] Browser LOG     ✅ 0 active banners loaded successfully
+[00:19:11.992] Browser LOG     No active banners found, using fallback
+[00:19:19.477] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-client] (ecmascript).
+Did you mean to import getMenuById?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:19.477] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-ssr] (ecmascript).
+Did you mean to import getMenuById?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:19.477] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-client] (ecmascript).
+Did you mean to import getMenuById?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:19.477] Browser ERROR   ./components/navigation.tsx:7:1
+Export getMenuHierarchy doesn't exist in target module
+   5 | import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
+   6 | import Image from "next/image"
+>  7 | import { getMenuHierarchy } from "@/lib/teamService"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | interface MenuItem {
+  10 |   id: string
+
+The export getMenuHierarchy was not found in module [project]/lib/teamService.ts [app-ssr] (ecmascript).
+Did you mean to import getMenuById?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/navigation.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navigation.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:19.477] Browser WARN    [2025-12-23T17:36:49.601Z]  @firebase/firestore: Firestore (12.6.0): WebChannelConnection RPC 'Listen' stream 0x378b84f9 transport errored. Name: undefined Message: undefined
+[00:19:22.218] Browser LOG     Loading team members from Firestore...
+[00:19:22.218] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:22.218] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[00:19:22.218] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511412374}
+[00:19:22.720] Browser LOG     ✅ Loaded 1 team members
+[00:19:22.720] Browser LOG     Loading menu items from Firestore...
+[00:19:22.720] Browser LOG     ✅ Loaded 5 menu items
+[00:19:22.720] Browser LOG     🔄 Setting up Firestore real-time listener...
+[00:19:22.720] Browser LOG     🔄 Setting up menu items real-time listener...
+[00:19:33.911] Browser LOG     Loading team members from Firestore...
+[00:19:33.911] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:33.911] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[00:19:33.911] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511424083}
+[00:19:34.497] Browser LOG     ✅ Loaded 1 team members
+[00:19:34.497] Browser LOG     Loading menu items from Firestore...
+[00:19:34.497] Browser LOG     ✅ Loaded 5 menu items
+[00:19:34.497] Browser LOG     🔄 Setting up Firestore real-time listener...
+[00:19:34.497] Browser LOG     🔄 Setting up menu items real-time listener...
+[00:19:39.945] Browser LOG     🗑️ Deleting menu item and descendants: ["ieo20T8xaHkEqvf828ci","YAevThN29w5ABFCs24f3","gOnIeIRnueZ8Gxe27qXr"]
+[00:19:45.288] Browser LOG     🗑️ Deleting menu item and descendants: ["hPKX0GgjPAPE4zsvuw58","oZxSpf8d0bYX6sr8RTi4"]
+[00:19:52.484] Browser LOG     Fetching banners from Firestore...
+[00:19:52.484] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:52.484] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:19:52.484] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511442656}
+[00:19:53.111] Browser ERROR   Error getting main menus: {"code":"failed-precondition","name":"FirebaseError"}
+[00:19:53.112] Browser LOG     Found 0 banners
+[00:19:53.112] Browser LOG     ✅ 0 active banners loaded successfully
+[00:19:53.112] Browser LOG     No active banners found, using fallback
+[00:19:53.112] Browser LOG     Fetching banners from Firestore...
+[00:19:53.112] Browser LOG     Found 0 banners
+[00:19:53.112] Browser LOG     ✅ 0 active banners loaded successfully
+[00:19:53.112] Browser LOG     No active banners found, using fallback
+[00:24:22.587] Server  LOG      ✓ Compiled in 147ms
+[00:24:43.017] Browser LOG     ➕ Adding new menu item...
+[00:24:43.017] Browser LOG     📝 Saving menu item to Firestore: {"createdAt":"2025-12-23T17:42:13.196Z","level":0,"order":1,"parentId":null,"teamMembers":[],"title":"delhi","type":"main","updatedAt":"2025-12-23T17:42:13.196Z"}
+[00:24:43.181] Browser LOG     ✅ Menu item added with ID: z3T0FL5mkWLkz4Gl3zLe
+[00:24:48.028] Browser LOG     Fetching banners from Firestore...
+[00:24:48.028] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:24:48.028] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:24:48.028] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511738201}
+[00:24:48.774] Browser LOG     Found 0 banners
+[00:24:48.774] Browser LOG     ✅ 0 active banners loaded successfully
+[00:24:48.774] Browser LOG     No active banners found, using fallback
+[00:24:48.774] Browser LOG     Fetching banners from Firestore...
+[00:24:48.774] Browser LOG     Found 0 banners
+[00:24:48.774] Browser LOG     ✅ 0 active banners loaded successfully
+[00:24:48.774] Browser LOG     No active banners found, using fallback
+[00:25:21.083] Browser LOG     ➕ Adding new team member...
+[00:25:21.083] Browser LOG     📤 Uploading image to Firebase Storage...
+[00:25:21.084] Browser LOG     📤 Starting Firebase Storage upload...
+[00:25:23.548] Browser LOG     ✅ File uploaded successfully: {"metadata":{"bucket":"global-shooting-league.firebasestorage.app","contentDisposition":"inline; filename*=utf-8''1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png","contentEncoding":"identity","contentType":"image/png","fullPath":"team-members/1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png","generation":"1766511772233422","md5Hash":"A0fQNS0+sF0XHerdV9/JZw==","metageneration":"1","name":"1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png","size":153128,"timeCreated":"2025-12-23T17:42:52.316Z","type":"file","updated":"2025-12-23T17:42:52.316Z"},"ref":{"_location":{"bucket":"global-shooting-league.firebasestorage.app","path_":"team-members/1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png"},"_service":{"_appCheckProvider":{"component":null,"container":{"name":"[DEFAULT]","providers":{}},"instances":{},"instancesDeferred":{},"instancesOptions":{},"name":"app-check-internal","onInitCallbacks":{}},"_appId":null,"_authProvider":{"component":{"instantiationMode":"EXPLICIT","multipleInstances":false,"name":"auth-internal","onInstanceCreated":null,"serviceProps":{},"type":"PRIVATE"},"container":{"name":"[DEFAULT]","providers":{}},"instances":{},"instancesDeferred":{},"instancesOptions":{},"name":"auth-internal","onInitCallbacks":{}},"_bucket":{"bucket":"global-shooting-league.firebasestorage.app","path_":""},"_deleted":false,"_firebaseVersion":"12.6.0","_host":"firebasestorage.googleapis.com","_isUsingEmulator":false,"_maxOperationRetryTime":120000,"_maxUploadRetryTime":600000,"_protocol":"https","_requests":{},"app":{"_automaticDataCollectionEnabled":true,"_config":{"automaticDataCollectionEnabled":true,"name":"[DEFAULT]"},"_container":{"name":"[DEFAULT]","providers":{}},"_isDeleted":false,"_name":"[DEFAULT]","_options":{"apiKey":"AIzaSyASf5SbEmA_lrgc01ejdhdxXwiX6qSPmF0","appId":"1:73570927401:web:75e2e5d54e51f961bf2d38","authDomain":"global-shooting-league.firebaseapp.com","messagingSenderId":"73570927401","projectId":"global-shooting-league","storageBucket":"global-shooting-league.firebasestorage.app"}}}}}
+[00:25:24.301] Browser LOG     ✅ Firebase Storage upload complete - URL: https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png?alt=media&token=00afcdfd-eeb5-4eed-b540-c0a329a0943f Path: team-members/1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png
+[00:25:24.872] Browser LOG     ✅ Image uploaded to Firebase Storage: https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png?alt=media&token=00afcdfd-eeb5-4eed-b540-c0a329a0943f
+[00:25:24.872] Browser LOG     📝 Saving to Firestore: {"createdAt":"2025-12-23T17:42:54.997Z","designation":"aaa","image":"https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png?alt=media&token=00afcdfd-eeb5-4eed-b540-c0a329a0943f","imagePath":"team-members/1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png","location":"delhi","menuId":"z3T0FL5mkWLkz4Gl3zLe","name":"harsh","order":1,"updatedAt":"2025-12-23T17:42:54.997Z"}
+[00:25:24.872] Browser LOG     ✅ Document written with ID: FnzwUWVtSfIzK1r1WjOg
+[00:25:37.325] Browser LOG     Fetching banners from Firestore...
+[00:25:37.325] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:37.325] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:25:37.325] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511787506}
+[00:25:37.886] Browser LOG     Found 0 banners
+[00:25:37.886] Browser LOG     ✅ 0 active banners loaded successfully
+[00:25:37.886] Browser LOG     No active banners found, using fallback
+[00:25:37.886] Browser LOG     Fetching banners from Firestore...
+[00:25:37.886] Browser LOG     Found 0 banners
+[00:25:37.886] Browser LOG     ✅ 0 active banners loaded successfully
+[00:25:37.886] Browser LOG     No active banners found, using fallback
+[00:25:42.555] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:25:42.557] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:25:42.558] Server  WARN    Error: Route "/team/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:25:42.593] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\node_modules_next_dist_3b4d20e1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:25:42.595] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\.next\dev\server\chunks\ssr\[root-of-the-server]__aa48334b._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:25:42.599] Server  WARN    Error: Route "/team/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:25:42.832] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511793002}
+[00:27:55.877] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:27:55.878] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:27:59.420] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:27:59.439] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:27:59.987] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:59.987] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team/z3T0FL5mkWLkz4Gl3zLe","route":"/team/[id]"}
+[00:27:59.987] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511930160}
+[00:28:02.652] Browser LOG     Fetching banners from Firestore...
+[00:28:02.652] Browser LOG     [2;38;2;124;124;124m%s[0m Fetching banners from Firestore...
+[00:28:02.652] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511932803}
+[00:28:03.195] Browser LOG     Found 0 banners
+[00:28:03.195] Browser LOG     ✅ 0 active banners loaded successfully
+[00:28:03.195] Browser LOG     No active banners found, using fallback
+[00:28:03.195] Browser LOG     Found 0 banners
+[00:28:03.195] Browser LOG     ✅ 0 active banners loaded successfully
+[00:28:03.195] Browser LOG     No active banners found, using fallback
+[00:28:03.195] Browser LOG     Fetching banners from Firestore...
+[00:28:03.195] Browser LOG     Found 0 banners
+[00:28:03.195] Browser LOG     ✅ 0 active banners loaded successfully
+[00:28:03.195] Browser LOG     No active banners found, using fallback
+[00:28:06.364] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:28:06.367] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:28:06.540] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766511936712}
+[00:33:16.301] Server  LOG      ✓ Compiled in 127ms
+[00:33:16.858] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:33:16.870] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:34:24.889] Browser LOG     Fetching banners from Firestore...
+[00:34:24.889] Browser LOG     [2;38;2;124;124;124m%s[0m Fetching banners from Firestore...
+[00:34:24.890] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766512315065}
+[00:34:25.136] Browser LOG     Found 0 banners
+[00:34:25.136] Browser LOG     ✅ 0 active banners loaded successfully
+[00:34:25.136] Browser LOG     No active banners found, using fallback
+[00:34:25.136] Browser LOG     Found 0 banners
+[00:34:25.136] Browser LOG     ✅ 0 active banners loaded successfully
+[00:34:25.136] Browser LOG     No active banners found, using fallback
+[00:34:25.136] Browser LOG     Fetching banners from Firestore...
+[00:34:25.136] Browser LOG     Found 0 banners
+[00:34:25.136] Browser LOG     ✅ 0 active banners loaded successfully
+[00:34:25.136] Browser LOG     No active banners found, using fallback
+[00:34:29.311] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:34:29.318] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:34:29.519] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766512319694}
+[00:34:34.246] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:34:34.264] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:34:34.898] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:34:34.898] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team/z3T0FL5mkWLkz4Gl3zLe","route":"/team/[id]"}
+[00:34:34.898] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766512325078}
+[00:38:29.418] Server  LOG      ✓ Compiled in 228ms
+[00:38:29.690] Server  LOG     TeamPage - ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:38:29.690] Server  LOG     TeamPage - Fetching data...
+[00:38:29.917] Server  LOG     TeamPage - Menu data: {}
+[00:38:29.918] Server  LOG     TeamPage - Fetching team members and child menus...
+[00:38:29.972] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:38:29.974] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:38:29.975] Server  LOG     TeamPage - Team members count: 0
+[00:38:29.975] Server  LOG     TeamPage - Team members data (first 2): []
+[00:38:29.975] Server  LOG     TeamPage - Child menus count: 0
+[00:38:51.651] Server  LOG     TeamPage - ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:38:51.651] Server  LOG     TeamPage - Fetching data...
+[00:38:51.652] Server  LOG     getMenuById - Fetching menu with ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:38:51.712] Server  LOG     getMenuById - Fetching menu with ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:38:51.924] Server  LOG     getMenuById - Found menu: "delhi"
+[00:38:51.925] Server  LOG     TeamPage - Menu data: {}
+[00:38:51.925] Server  LOG     TeamPage - Fetching team members and child menus...
+[00:38:51.926] Server  LOG     getTeamMembersByMenuId - Fetching team members for menuId: "z3T0FL5mkWLkz4Gl3zLe"
+[00:38:51.940] Server  LOG     getMenuById - Found menu: "delhi"
+[00:38:51.994] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:38:51.995] Server  ERROR   Firestore index required! Please create a composite index for teamMembers collection on fields: menuId, order
+[00:38:51.996] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:38:51.996] Server  LOG     TeamPage - Team members count: 0
+[00:38:51.996] Server  LOG     TeamPage - Team members data (first 2): []
+[00:38:51.997] Server  LOG     TeamPage - Child menus count: 0
+[00:39:03.227] Server  LOG     TeamPage - ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:39:03.227] Server  LOG     TeamPage - Fetching data...
+[00:39:03.228] Server  LOG     getMenuById - Fetching menu with ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:39:03.237] Server  LOG     getMenuById - Fetching menu with ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:39:03.303] Server  LOG     getMenuById - Found menu: "delhi"
+[00:39:03.305] Server  LOG     TeamPage - Menu data: {}
+[00:39:03.306] Server  LOG     TeamPage - Fetching team members and child menus...
+[00:39:03.306] Server  LOG     getTeamMembersByMenuId - Fetching team members for menuId: "z3T0FL5mkWLkz4Gl3zLe"
+[00:39:03.316] Server  LOG     getMenuById - Found menu: "delhi"
+[00:39:03.380] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:39:03.380] Server  ERROR   Firestore index required! Please create a composite index for teamMembers collection on fields: menuId, order
+[00:39:03.392] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:39:03.392] Server  LOG     TeamPage - Team members count: 0
+[00:39:03.393] Server  LOG     TeamPage - Team members data (first 2): []
+[00:39:03.393] Server  LOG     TeamPage - Child menus count: 0
+[00:39:04.028] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:39:04.029] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team/z3T0FL5mkWLkz4Gl3zLe","route":"/team/[id]"}
+[00:39:04.029] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766512594202}
+[00:39:06.510] Browser LOG     Fetching banners from Firestore...
+[00:39:06.511] Browser LOG     [2;38;2;124;124;124m%s[0m Fetching banners from Firestore...
+[00:39:06.511] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766512596661}
+[00:39:07.104] Browser LOG     Found 0 banners
+[00:39:07.104] Browser LOG     ✅ 0 active banners loaded successfully
+[00:39:07.104] Browser LOG     No active banners found, using fallback
+[00:39:07.104] Browser LOG     Found 0 banners
+[00:39:07.104] Browser LOG     ✅ 0 active banners loaded successfully
+[00:39:07.104] Browser LOG     No active banners found, using fallback
+[00:39:07.104] Browser LOG     Fetching banners from Firestore...
+[00:39:07.104] Browser LOG     Found 0 banners
+[00:39:07.104] Browser LOG     ✅ 0 active banners loaded successfully
+[00:39:07.104] Browser LOG     No active banners found, using fallback
+[00:39:10.561] Server  LOG     TeamPage - ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:39:10.562] Server  LOG     TeamPage - Fetching data...
+[00:39:10.563] Server  LOG     getMenuById - Fetching menu with ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:39:10.585] Server  LOG     getMenuById - Fetching menu with ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:39:10.628] Server  LOG     getMenuById - Found menu: "delhi"
+[00:39:10.631] Server  LOG     TeamPage - Menu data: {}
+[00:39:10.632] Server  LOG     TeamPage - Fetching team members and child menus...
+[00:39:10.633] Server  LOG     getTeamMembersByMenuId - Fetching team members for menuId: "z3T0FL5mkWLkz4Gl3zLe"
+[00:39:10.652] Server  LOG     getMenuById - Found menu: "delhi"
+[00:39:10.726] Server  ERROR   Error getting team members: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clpwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy90ZWFtTWVtYmVycy9pbmRleGVzL18QARoKCgZtZW51SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:39:10.727] Server  ERROR   Firestore index required! Please create a composite index for teamMembers collection on fields: menuId, order
+[00:39:10.748] Server  ERROR   Error getting child menus: FirebaseError: [code=failed-precondition]: The query requires an index. You can create it here: https://console.firebase.google.com/v1/r/project/global-shooting-league/firestore/indexes?create_composite=Clhwcm9qZWN0cy9nbG9iYWwtc2hvb3RpbmctbGVhZ3VlL2RhdGFiYXNlcy8oZGVmYXVsdCkvY29sbGVjdGlvbkdyb3Vwcy9tZW51SXRlbXMvaW5kZXhlcy9fEAEaDAoIcGFyZW50SWQQARoJCgVvcmRlchABGgwKCF9fbmFtZV9fEAE
+[00:39:10.749] Server  LOG     TeamPage - Team members count: 0
+[00:39:10.750] Server  LOG     TeamPage - Team members data (first 2): []
+[00:39:10.751] Server  LOG     TeamPage - Child menus count: 0
+[00:39:10.965] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766512601131}
+[00:42:43.028] Server  LOG      ✓ Compiled in 238ms
+[00:42:43.460] Server  LOG     TeamPage - ID: "z3T0FL5mkWLkz4Gl3zLe"
+[00:42:43.460] Server  LOG     TeamPage - Fetching data...
+[00:42:43.677] Server  LOG     TeamPage - Menu data: {}
+[00:42:43.683] Server  LOG     TeamPage - Fetching team members and child menus...
+[00:42:43.684] Server  LOG     Fetching team members for menuId: "z3T0FL5mkWLkz4Gl3zLe"
+[00:42:43.833] Server  LOG     Found 1 team members for menu z3T0FL5mkWLkz4Gl3zLe
+[00:42:43.834] Server  LOG     First member image URL: "Present"
+[00:42:43.834] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png?alt=media&token=00afcdfd-eeb5-4eed-b540-c0a329a0943f"
+[00:42:43.837] Server  LOG     TeamPage - Team members count: 1
+[00:42:43.840] Server  LOG     TeamPage - Team members data (first 2): [{...}]
+[00:42:43.841] Server  LOG     TeamPage - Child menus count: 0
+[00:42:43.843] Server  LOG     TeamPage - Rendering member: {}
+[00:42:43.936] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:42:43.937] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt="harsh" width={128} height=... className=... loading=... onError={function onError}>
+                                                                                    ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:42:44.264] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt="harsh" width={128} height=... className=... loading=... onError={function onError}>
+                                                                                    ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:26.343] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:44:26.361] Server  LOG      ✓ Compiled in 278ms
+[00:44:26.783] Server  LOG     Fetching team members for menuId: "z3T0FL5mkWLkz4Gl3zLe"
+[00:44:26.891] Server  LOG     Found 1 team members for menu z3T0FL5mkWLkz4Gl3zLe
+[00:44:26.891] Server  LOG     First member image URL: "Present"
+[00:44:26.892] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png?alt=media&token=00afcdfd-eeb5-4eed-b540-c0a329a0943f"
+[00:44:26.976] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:44:26.977] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt=... className=... onLoad={function onLoad} onError=...>
+                                            ^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:26.979] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:44:26.981] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt=... className=... onLoad=... onError={function onError}>
+                                                        ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:26.984] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:44:26.985] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt="harsh" width={128} height=... className=... loading=... onError={function onError}>
+                                                                                    ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:28.273] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt=... className=... onLoad={function onLoad} onError=...>
+                                            ^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:35.491] Server  LOG     Fetching team members for menuId: "z3T0FL5mkWLkz4Gl3zLe"
+[00:44:35.583] Server  LOG     Found 1 team members for menu z3T0FL5mkWLkz4Gl3zLe
+[00:44:35.583] Server  LOG     First member image URL: "Present"
+[00:44:35.584] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png?alt=media&token=00afcdfd-eeb5-4eed-b540-c0a329a0943f"
+[00:44:35.667] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:44:35.670] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt=... className=... onLoad={function onLoad} onError=...>
+                                            ^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:35.674] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:44:35.677] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt=... className=... onLoad=... onError={function onError}>
+                                                        ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:35.680] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:44:35.683] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt="harsh" width={128} height=... className=... loading=... onError={function onError}>
+                                                                                    ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:36.191] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt=... className=... onLoad={function onLoad} onError=...>
+                                            ^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:41.537] Browser LOG     Fetching banners from Firestore...
+[00:44:41.537] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:44:41.537] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:44:41.537] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766512931717}
+[00:44:42.202] Browser LOG     Found 0 banners
+[00:44:42.202] Browser LOG     ✅ 0 active banners loaded successfully
+[00:44:42.202] Browser LOG     No active banners found, using fallback
+[00:44:42.202] Browser LOG     Fetching banners from Firestore...
+[00:44:42.202] Browser LOG     Found 0 banners
+[00:44:42.202] Browser LOG     ✅ 0 active banners loaded successfully
+[00:44:42.202] Browser LOG     No active banners found, using fallback
+[00:44:45.218] Server  LOG     Fetching team members for menuId: "z3T0FL5mkWLkz4Gl3zLe"
+[00:44:45.276] Server  LOG     Found 1 team members for menu z3T0FL5mkWLkz4Gl3zLe
+[00:44:45.277] Server  LOG     First member image URL: "Present"
+[00:44:45.278] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png?alt=media&token=00afcdfd-eeb5-4eed-b540-c0a329a0943f"
+[00:44:45.308] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:44:45.310] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt=... className=... onLoad={function onLoad} onError=...>
+                                            ^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:45.314] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:44:45.316] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt=... className=... onLoad=... onError={function onError}>
+                                                        ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:45.323] Server  ERROR   C:\Users\Lenovo\Downloads\foundation-website\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:44:45.326] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt="harsh" width={128} height=... className=... loading=... onError={function onError}>
+                                                                                    ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:44:45.533] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <img src=... alt=... className=... onLoad={function onLoad} onError=...>
+                                            ^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:47:23.768] Server  LOG      ✓ Compiled in 136ms
+[00:47:24.243] Server  LOG     Fetching team members for menuId: "z3T0FL5mkWLkz4Gl3zLe"
+[00:47:24.368] Server  LOG     Found 1 team members for menu z3T0FL5mkWLkz4Gl3zLe
+[00:47:24.369] Server  LOG     First member image URL: "Present"
+[00:47:24.369] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766511771254_cl1cuh5xhdh_Screenshot_2025-12-04_122105.png?alt=media&token=00afcdfd-eeb5-4eed-b540-c0a329a0943f"
+[00:47:25.255] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:47:25.255] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team/z3T0FL5mkWLkz4Gl3zLe","route":"/team/[id]"}
+[00:47:25.255] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/z3T0FL5mkWLkz4Gl3zLe","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766513095144}
+[00:47:33.521] Browser LOG     Fetching banners from Firestore...
+[00:47:33.521] Browser LOG     [2;38;2;124;124;124m%s[0m Fetching banners from Firestore...
+[00:47:33.521] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766513103678}
+[00:47:34.341] Browser LOG     Found 0 banners
+[00:47:34.341] Browser LOG     ✅ 0 active banners loaded successfully
+[00:47:34.341] Browser LOG     No active banners found, using fallback
+[00:47:34.341] Browser LOG     Found 0 banners
+[00:47:34.341] Browser LOG     ✅ 0 active banners loaded successfully
+[00:47:34.341] Browser LOG     No active banners found, using fallback
+[00:47:34.341] Browser LOG     Fetching banners from Firestore...
+[00:47:34.341] Browser LOG     Found 0 banners
+[00:47:34.341] Browser LOG     ✅ 0 active banners loaded successfully
+[00:47:34.342] Browser LOG     No active banners found, using fallback
+[00:47:38.019] Browser WARN    [2025-12-23T18:05:08.201Z]  @firebase/firestore: Firestore (12.6.0): WebChannelConnection RPC 'Listen' stream 0x2ac9c3ea transport errored. Name: undefined Message: undefined
+[00:47:49.053] Browser LOG     ➕ Adding new menu item...
+[00:47:49.053] Browser LOG     📝 Saving menu item to Firestore: {"createdAt":"2025-12-23T18:05:19.231Z","level":0,"order":2,"parentId":null,"teamMembers":[],"title":"bihar","type":"main","updatedAt":"2025-12-23T18:05:19.231Z"}
+[00:47:49.184] Browser LOG     ✅ Menu item added with ID: RvYqiqnHcfa7qqa7z9Ud
+[00:48:00.810] Browser LOG     ➕ Adding new menu item...
+[00:48:00.810] Browser LOG     📝 Saving menu item to Firestore: {"createdAt":"2025-12-23T18:05:30.897Z","level":1,"order":1,"parentId":"z3T0FL5mkWLkz4Gl3zLe","teamMembers":[],"title":"patna","type":"submenu","updatedAt":"2025-12-23T18:05:30.897Z"}
+[00:48:00.810] Browser LOG     ✅ Menu item added with ID: rqzL55ZSQ0fLxwN3bF09
+[00:48:24.407] Browser LOG     ➕ Adding new team member...
+[00:48:24.407] Browser LOG     📤 Uploading image to Firebase Storage...
+[00:48:24.407] Browser LOG     📤 Starting Firebase Storage upload...
+[00:48:26.986] Browser LOG     ✅ File uploaded successfully: {"metadata":{"bucket":"global-shooting-league.firebasestorage.app","contentDisposition":"inline; filename*=utf-8''1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png","contentEncoding":"identity","contentType":"image/png","fullPath":"team-members/1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png","generation":"1766513155608072","md5Hash":"mvxI5W9KnnWE0fe4goQeTA==","metageneration":"1","name":"1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png","size":685404,"timeCreated":"2025-12-23T18:05:55.690Z","type":"file","updated":"2025-12-23T18:05:55.690Z"},"ref":{"_location":{"bucket":"global-shooting-league.firebasestorage.app","path_":"team-members/1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png"},"_service":{"_appCheckProvider":{"component":null,"container":{"name":"[DEFAULT]","providers":{}},"instances":{},"instancesDeferred":{},"instancesOptions":{},"name":"app-check-internal","onInitCallbacks":{}},"_appId":null,"_authProvider":{"component":{"instantiationMode":"EXPLICIT","multipleInstances":false,"name":"auth-internal","onInstanceCreated":null,"serviceProps":{},"type":"PRIVATE"},"container":{"name":"[DEFAULT]","providers":{}},"instances":{},"instancesDeferred":{},"instancesOptions":{},"name":"auth-internal","onInitCallbacks":{}},"_bucket":{"bucket":"global-shooting-league.firebasestorage.app","path_":""},"_deleted":false,"_firebaseVersion":"12.6.0","_host":"firebasestorage.googleapis.com","_isUsingEmulator":false,"_maxOperationRetryTime":120000,"_maxUploadRetryTime":600000,"_protocol":"https","_requests":{},"app":{"_automaticDataCollectionEnabled":true,"_config":{"automaticDataCollectionEnabled":true,"name":"[DEFAULT]"},"_container":{"name":"[DEFAULT]","providers":{}},"_isDeleted":false,"_name":"[DEFAULT]","_options":{"apiKey":"AIzaSyASf5SbEmA_lrgc01ejdhdxXwiX6qSPmF0","appId":"1:73570927401:web:75e2e5d54e51f961bf2d38","authDomain":"global-shooting-league.firebaseapp.com","messagingSenderId":"73570927401","projectId":"global-shooting-league","storageBucket":"global-shooting-league.firebasestorage.app"}}}}}
+[00:48:27.851] Browser LOG     ✅ Firebase Storage upload complete - URL: https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png?alt=media&token=8bbad23c-b6e3-4ae2-a1bf-3137fb861e07 Path: team-members/1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png
+[00:48:28.418] Browser LOG     ✅ Image uploaded to Firebase Storage: https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png?alt=media&token=8bbad23c-b6e3-4ae2-a1bf-3137fb861e07
+[00:48:28.418] Browser LOG     📝 Saving to Firestore: {"createdAt":"2025-12-23T18:05:58.534Z","designation":"aaaaaa","image":"https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png?alt=media&token=8bbad23c-b6e3-4ae2-a1bf-3137fb861e07","imagePath":"team-members/1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png","location":"delhi","menuId":"rqzL55ZSQ0fLxwN3bF09","name":"harshhhhhh","order":1,"updatedAt":"2025-12-23T18:05:58.534Z"}
+[00:48:28.418] Browser LOG     ✅ Document written with ID: avYNHyjYjem2YLDuXHac
+[00:48:32.415] Browser LOG     Fetching banners from Firestore...
+[00:48:32.415] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:48:32.415] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:48:32.415] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766513162590}
+[00:48:33.000] Browser LOG     Found 0 banners
+[00:48:33.000] Browser LOG     ✅ 0 active banners loaded successfully
+[00:48:33.000] Browser LOG     No active banners found, using fallback
+[00:48:33.000] Browser LOG     Fetching banners from Firestore...
+[00:48:33.000] Browser LOG     Found 0 banners
+[00:48:33.000] Browser LOG     ✅ 0 active banners loaded successfully
+[00:48:33.000] Browser LOG     No active banners found, using fallback
+[00:48:42.313] Server  LOG     Fetching team members for menuId: "rqzL55ZSQ0fLxwN3bF09"
+[00:48:42.402] Server  LOG     Found 1 team members for menu rqzL55ZSQ0fLxwN3bF09
+[00:48:42.403] Server  LOG     First member image URL: "Present"
+[00:48:42.403] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766513154577_zflbjbfknmb_Screenshot_2025-12-04_122027.png?alt=media&token=8bbad23c-b6e3-4ae2-a1bf-3137fb861e07"
+[00:48:42.565] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/rqzL55ZSQ0fLxwN3bF09 color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/rqzL55ZSQ0fLxwN3bF09","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766513172745}
+[00:49:22.060] Browser LOG     ➕ Adding new menu item...
+[00:49:22.060] Browser LOG     📝 Saving menu item to Firestore: {"createdAt":"2025-12-23T18:06:52.142Z","level":1,"order":1,"parentId":"RvYqiqnHcfa7qqa7z9Ud","teamMembers":[],"title":"patna2","type":"submenu","updatedAt":"2025-12-23T18:06:52.142Z"}
+[00:49:22.060] Browser LOG     ✅ Menu item added with ID: Zv98UsoABSrcfQ8PtRHn
+[00:49:52.719] Browser LOG     ➕ Adding new team member...
+[00:49:52.719] Browser LOG     📤 Uploading image to Firebase Storage...
+[00:49:52.719] Browser LOG     📤 Starting Firebase Storage upload...
+[00:49:54.972] Browser LOG     ✅ File uploaded successfully: {"metadata":{"bucket":"global-shooting-league.firebasestorage.app","contentDisposition":"inline; filename*=utf-8''1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png","contentEncoding":"identity","contentType":"image/png","fullPath":"team-members/1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png","generation":"1766513243719888","md5Hash":"A0fQNS0+sF0XHerdV9/JZw==","metageneration":"1","name":"1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png","size":153128,"timeCreated":"2025-12-23T18:07:23.786Z","type":"file","updated":"2025-12-23T18:07:23.786Z"},"ref":{"_location":{"bucket":"global-shooting-league.firebasestorage.app","path_":"team-members/1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png"},"_service":{"_appCheckProvider":{"component":null,"container":{"name":"[DEFAULT]","providers":{}},"instances":{},"instancesDeferred":{},"instancesOptions":{},"name":"app-check-internal","onInitCallbacks":{}},"_appId":null,"_authProvider":{"component":{"instantiationMode":"EXPLICIT","multipleInstances":false,"name":"auth-internal","onInstanceCreated":null,"serviceProps":{},"type":"PRIVATE"},"container":{"name":"[DEFAULT]","providers":{}},"instances":{},"instancesDeferred":{},"instancesOptions":{},"name":"auth-internal","onInitCallbacks":{}},"_bucket":{"bucket":"global-shooting-league.firebasestorage.app","path_":""},"_deleted":false,"_firebaseVersion":"12.6.0","_host":"firebasestorage.googleapis.com","_isUsingEmulator":false,"_maxOperationRetryTime":120000,"_maxUploadRetryTime":600000,"_protocol":"https","_requests":{},"app":{"_automaticDataCollectionEnabled":true,"_config":{"automaticDataCollectionEnabled":true,"name":"[DEFAULT]"},"_container":{"name":"[DEFAULT]","providers":{}},"_isDeleted":false,"_name":"[DEFAULT]","_options":{"apiKey":"AIzaSyASf5SbEmA_lrgc01ejdhdxXwiX6qSPmF0","appId":"1:73570927401:web:75e2e5d54e51f961bf2d38","authDomain":"global-shooting-league.firebaseapp.com","messagingSenderId":"73570927401","projectId":"global-shooting-league","storageBucket":"global-shooting-league.firebasestorage.app"}}}}}
+[00:49:55.780] Browser LOG     ✅ Firebase Storage upload complete - URL: https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png?alt=media&token=0a30a777-7ff2-469d-a01d-d35a240adb3d Path: team-members/1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png
+[00:49:56.329] Browser LOG     ✅ Image uploaded to Firebase Storage: https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png?alt=media&token=0a30a777-7ff2-469d-a01d-d35a240adb3d
+[00:49:56.329] Browser LOG     📝 Saving to Firestore: {"createdAt":"2025-12-23T18:07:26.454Z","designation":"harsh","image":"https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png?alt=media&token=0a30a777-7ff2-469d-a01d-d35a240adb3d","imagePath":"team-members/1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png","location":"harsh","menuId":"Zv98UsoABSrcfQ8PtRHn","name":"harsh","order":1,"updatedAt":"2025-12-23T18:07:26.454Z"}
+[00:49:56.329] Browser LOG     ✅ Document written with ID: YlL3WS4JOBmQe3Q2FZA2
+[00:50:00.411] Browser LOG     Fetching banners from Firestore...
+[00:50:00.411] Browser LOG     [2;38;2;124;124;124m%s[0m Fetching banners from Firestore...
+[00:50:00.411] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766513250572}
+[00:50:00.584] Browser LOG     Found 0 banners
+[00:50:00.584] Browser LOG     ✅ 0 active banners loaded successfully
+[00:50:00.584] Browser LOG     No active banners found, using fallback
+[00:50:00.584] Browser LOG     Found 0 banners
+[00:50:00.584] Browser LOG     ✅ 0 active banners loaded successfully
+[00:50:00.584] Browser LOG     No active banners found, using fallback
+[00:50:00.584] Browser LOG     Fetching banners from Firestore...
+[00:50:00.584] Browser LOG     Found 0 banners
+[00:50:00.584] Browser LOG     ✅ 0 active banners loaded successfully
+[00:50:00.584] Browser LOG     No active banners found, using fallback
+[00:50:04.490] Server  LOG     Fetching team members for menuId: "Zv98UsoABSrcfQ8PtRHn"
+[00:50:04.594] Server  LOG     Found 1 team members for menu Zv98UsoABSrcfQ8PtRHn
+[00:50:04.595] Server  LOG     First member image URL: "Present"
+[00:50:04.596] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766513242900_q6eahncsb8_Screenshot_2025-12-04_122105.png?alt=media&token=0a30a777-7ff2-469d-a01d-d35a240adb3d"
+[00:50:04.797] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/Zv98UsoABSrcfQ8PtRHn color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/Zv98UsoABSrcfQ8PtRHn","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766513254977}
+[00:50:12.850] Browser LOG     🗑️ Deleting menu item and descendants: ["z3T0FL5mkWLkz4Gl3zLe","rqzL55ZSQ0fLxwN3bF09"]
+[00:50:15.930] Browser LOG     🗑️ Deleting menu item and descendants: ["RvYqiqnHcfa7qqa7z9Ud","Zv98UsoABSrcfQ8PtRHn"]

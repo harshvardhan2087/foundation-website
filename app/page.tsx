@@ -42,25 +42,189 @@ import {
 } from "lucide-react"
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import { db } from "@/lib/firebase"
+import { collection, getDocs, query, orderBy } from "firebase/firestore"
+
+interface Banner {
+  id: string
+  imageUrl: string
+  title?: string
+  description?: string
+  order: number
+  active: boolean
+}
+
+interface Stat {
+  id: string
+  number: string
+  label: string
+  description: string
+  order: number
+}
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [currentBanner, setCurrentBanner] = useState(0)
+  
+  // State for dynamic content
+  const [banners, setBanners] = useState<Banner[]>([])
+  const [stats, setStats] = useState<Stat[]>([])
+  const [loading, setLoading] = useState(true)
+  const [bannerError, setBannerError] = useState<string | null>(null)
 
   useEffect(() => {
     setIsLoaded(true)
+    
+    // Load all dynamic content
+    fetchHomePageData()
+    
+    // Banner rotation interval
     const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length)
+      if (banners.length > 0) {
+        setCurrentBanner((prev) => (prev + 1) % banners.length)
+      }
     }, 5000)
+    
     return () => clearInterval(interval)
-  }, [])
+  }, [banners.length])
 
-  // Banner Images
-  const banners = [
-    "/images/banner.png",
-    "/images/hero-image.jpg", 
-    "/images/foundation-banner.png",
-  ]
+  // Fetch all home page data from Firestore
+  const fetchHomePageData = async () => {
+    try {
+      setLoading(true)
+      setBannerError(null)
+      
+      // Fetch banners - get all and filter locally to avoid index requirement
+      console.log("Fetching banners from Firestore...")
+      const bannersQuery = query(
+        collection(db, "homeBanners"), 
+        orderBy("order") // Only order by, no where clause to avoid index requirement
+      )
+      const bannersSnapshot = await getDocs(bannersQuery)
+      console.log(`Found ${bannersSnapshot.size} banners`)
+      
+      let bannersData: Banner[] = []
+      bannersSnapshot.forEach((doc) => {
+        const data = doc.data()
+        console.log(`Banner ${doc.id}:`, data)
+        bannersData.push({
+          id: doc.id,
+          imageUrl: data.imageUrl || "",
+          title: data.title || "",
+          description: data.description || "",
+          order: data.order || 0,
+          active: data.active === undefined ? true : data.active
+        } as Banner)
+      })
+      
+      // Filter active banners locally
+      bannersData = bannersData.filter(banner => banner.active === true)
+      
+      // Sort by order
+      bannersData.sort((a, b) => a.order - b.order)
+      setBanners(bannersData)
+      console.log(`✅ ${bannersData.length} active banners loaded successfully`)
+
+      // If no banners are active, show a fallback banner
+      if (bannersData.length === 0) {
+        console.log("No active banners found, using fallback")
+        setBanners([
+          { 
+            id: 'fallback', 
+            imageUrl: '/images/banner.png', 
+            title: 'Aapka Sahyog Foundation',
+            description: 'Building a better tomorrow together',
+            order: 0, 
+            active: true 
+          }
+        ])
+      }
+
+      // Fetch stats - only orderBy, no where clause to avoid index requirement
+      try {
+        const statsQuery = query(collection(db, "homeStats"), orderBy("order"))
+        const statsSnapshot = await getDocs(statsQuery)
+        const statsData: Stat[] = []
+        statsSnapshot.forEach((doc) => {
+          const data = doc.data()
+          statsData.push({
+            id: doc.id,
+            number: data.number || "",
+            label: data.label || "",
+            description: data.description || "",
+            order: data.order || 0
+          } as Stat)
+        })
+        
+        // Sort by order
+        statsData.sort((a, b) => a.order - b.order)
+        
+        // If no stats in Firestore, use fallback stats
+        if (statsData.length === 0) {
+          setStats([
+            { id: '1', number: "50+", label: "Communities Served", description: "Across Uttar Pradesh", order: 0 },
+            { id: '2', number: "5000+", label: "Lives Impacted", description: "Through our programs", order: 1 },
+            { id: '3', number: "20+", label: "Active Programs", description: "In multiple sectors", order: 2 },
+            { id: '4', number: "45+", label: "Social Objectives", description: "For comprehensive development", order: 3 },
+          ])
+        } else {
+          setStats(statsData)
+        }
+      } catch (statsError) {
+        console.error("Error loading stats:", statsError)
+        // Use fallback stats
+        setStats([
+          { id: '1', number: "50+", label: "Communities Served", description: "Across Uttar Pradesh", order: 0 },
+          { id: '2', number: "5000+", label: "Lives Impacted", description: "Through our programs", order: 1 },
+          { id: '3', number: "20+", label: "Active Programs", description: "In multiple sectors", order: 2 },
+          { id: '4', number: "45+", label: "Social Objectives", description: "For comprehensive development", order: 3 },
+        ])
+      }
+
+    } catch (error: any) {
+      console.error("❌ Error fetching home page data:", error)
+      setBannerError(`Failed to load banners: ${error.message}`)
+      
+      // Use fallback banner if Firestore fails
+      setBanners([
+        { 
+          id: 'fallback', 
+          imageUrl: '/images/banner.png', 
+          title: 'Aapka Sahyog Foundation',
+          description: 'Building a better tomorrow together',
+          order: 0, 
+          active: true 
+        }
+      ])
+      
+      setStats([
+        { id: '1', number: "50+", label: "Communities Served", description: "Across Uttar Pradesh", order: 0 },
+        { id: '2', number: "5000+", label: "Lives Impacted", description: "Through our programs", order: 1 },
+        { id: '3', number: "20+", label: "Active Programs", description: "In multiple sectors", order: 2 },
+        { id: '4', number: "45+", label: "Social Objectives", description: "For comprehensive development", order: 3 },
+      ])
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  // Function to handle image loading errors
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>, bannerIndex: number) => {
+    console.error(`Failed to load banner image: ${banners[bannerIndex]?.imageUrl}`)
+    const img = e.target as HTMLImageElement
+    
+    // Try to use the fallback image
+    img.src = '/images/banner.png'
+    img.onerror = null // Prevent infinite loop
+    
+    // Update the banner with fallback image
+    const updatedBanners = [...banners]
+    updatedBanners[bannerIndex] = {
+      ...updatedBanners[bannerIndex],
+      imageUrl: '/images/banner.png'
+    }
+    setBanners(updatedBanners)
+  }
 
   // YouTube Videos
   const youtubeVideos = [
@@ -68,13 +232,6 @@ export default function Home() {
     { id: "szEHs0kxGX4", description: "Youth training in action" },
     { id: "xUg5cXIv6UY",  description: "Medical services in rural areas" },
     { id: "6ivD8ryf4Bo",description: "Clean Green India Mission activities" },
-  ]
-
-  const stats = [
-    { number: "50+", label: "Communities Served", icon: MapPin, description: "Across Uttar Pradesh" },
-    { number: "5000+", label: "Lives Impacted", icon: Users, description: "Through our programs" },
-    { number: "20+", label: "Active Programs", icon: TargetIcon, description: "In multiple sectors" },
-    { number: "45+", label: "Social Objectives", icon: Target, description: "For comprehensive development" },
   ]
 
   const achievements = [
@@ -121,71 +278,121 @@ export default function Home() {
     transition: { duration: 0.6 }
   }
 
+  if (loading) {
+    return (
+      <>
+        <Navigation />
+        <main className="min-h-screen bg-white flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mx-auto"></div>
+            <p className="mt-4 text-gray-600">Loading website content...</p>
+          </div>
+        </main>
+        <Footer />
+      </>
+    )
+  }
+
   return (
     <>
       <Navigation />
       <main className="min-h-screen bg-white">
         {/* Hero Section - Fully Responsive */}
-        <section
-  className="relative 
-    h-[45vh] sm:h-[60vh] md:h-screen
-    flex items-center justify-center 
-    overflow-hidden w-full">
+        <section className="relative h-[45vh] sm:h-[60vh] md:h-screen flex items-center justify-center overflow-hidden w-full">
+          {/* Background Banners */}
+          <div className="absolute inset-0 z-0">
+            {banners.map((banner, index) => (
+              <motion.div
+                key={banner.id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: currentBanner === index ? 1 : 0 }}
+                transition={{ duration: 1 }}
+                className="absolute inset-0"
+              >
+                {/* Use regular img tag for Firebase Storage URLs for better error handling */}
+                <img
+                  src={banner.imageUrl}
+                  alt={banner.title || `Foundation Banner ${index + 1}`}
+                  onError={(e) => handleImageError(e, index)}
+                  className="w-full h-full object-cover bg-black"
+                  style={{ 
+                    objectFit: 'cover',
+                    width: '100%',
+                    height: '100%'
+                  }}
+                />
+              </motion.div>
+            ))}
+          </div>
 
-  {/* Background Banners */}
-  <div className="absolute inset-0 z-0">
-    {banners.map((banner, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: currentBanner === index ? 1 : 0 }}
-        transition={{ duration: 1 }}
-        className="absolute inset-0"
-      >
-        <Image
-          src={banner}
-          alt={`Foundation Banner ${index + 1}`}
-          fill
-          priority
-          sizes="100vw"
-          className="
-            w-full h-full 
-            object-contain        /* mobile: no cropping */
-            sm:object-cover       /* tablet & desktop: fill screen */
-            bg-black              /* prevents white gaps */
-          "
-        />
-      </motion.div>
-    ))}
-  </div>
+          {/* Banner Content Overlay */}
+          <div className="absolute inset-0 z-10 bg-black/40 flex items-center justify-center">
+            <div className="text-center text-white px-4 max-w-4xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                  {banners[currentBanner]?.title || 'Aapka Sahyog Foundation'}
+                </h1>
+                <p className="text-lg sm:text-xl md:text-2xl mb-6 text-white/90">
+                  {banners[currentBanner]?.description || 'Building a better tomorrow together'}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-600 transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/20 text-white font-semibold rounded-lg hover:bg-white/30 transition-colors backdrop-blur-sm"
+                  >
+                    Get Involved
+                    <Users className="w-4 h-4" />
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+          </div>
 
-  {/* Banner Navigation */}
-  <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-    {banners.map((_, index) => (
-      <button
-        key={index}
-        onClick={() => setCurrentBanner(index)}
-        className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
-          currentBanner === index
-            ? 'bg-yellow-500 w-6 sm:w-8'
-            : 'bg-white/50 hover:bg-white'
-        }`}
-        aria-label={`Go to slide ${index + 1}`}
-      />
-    ))}
-  </div>
+          {/* Banner Navigation */}
+          {banners.length > 1 && (
+            <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+              {banners.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentBanner(index)}
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
+                    currentBanner === index
+                      ? 'bg-yellow-500 w-6 sm:w-8'
+                      : 'bg-white/50 hover:bg-white'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
 
-  {/* Scroll Indicator */}
-  <motion.div
-    animate={{ y: [0, 10, 0] }}
-    transition={{ repeat: Infinity, duration: 2 }}
-    className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-  >
-    <ChevronRight className="text-white rotate-90 w-5 h-5 sm:w-6 sm:h-6" />
-  </motion.div>
-</section>
+          {/* Scroll Indicator */}
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+          >
+            <ChevronRight className="text-white rotate-90 w-5 h-5 sm:w-6 sm:h-6" />
+          </motion.div>
 
-
+          {/* Error Message (hidden by default) */}
+          {bannerError && (
+            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-30 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+              <span className="block sm:inline">{bannerError}</span>
+            </div>
+          )}
+        </section>
 
         {/* Quick Stats - Responsive */}
         <section className="bg-gradient-to-r from-gray-900 to-black text-white py-8 sm:py-10 md:py-12">
@@ -193,7 +400,7 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {stats.map((stat, index) => (
                 <motion.div
-                  key={index}
+                  key={stat.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -255,13 +462,6 @@ export default function Home() {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-                  {/* <Link
-                    href="/about"
-                    className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-black transition-all text-sm sm:text-base"
-                  >
-                    Read Our Story
-                    <ArrowRight className="w-4 h-4" />
-                  </Link> */}
                   <Link
                     href="/contact"
                     className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 border border-gray-300 text-gray-900 rounded-lg font-semibold hover:bg-gray-50 transition-all text-sm sm:text-base"
