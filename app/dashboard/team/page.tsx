@@ -66,6 +66,8 @@ import {
 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
+import { FileText } from "lucide-react"
+import AboutPageEditor from "@/components/admin/AboutPageEditor"
 
 interface TeamMember {
   id: string
@@ -134,7 +136,7 @@ export default function AdminDashboard() {
   })
   const [editingMember, setEditingMember] = useState<TeamMember | null>(null)
   const [editingMenuItem, setEditingMenuItem] = useState<MenuItem | null>(null)
-  const [activeTab, setActiveTab] = useState<"team" | "banners" | "analytics">("team")
+  const [activeTab, setActiveTab] = useState<"team" | "banners" | "analytics" | "about">("team")
   const [selectedMenuId, setSelectedMenuId] = useState<string | null>(null)
   const [showMenuForm, setShowMenuForm] = useState(false)
   const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set())
@@ -1536,6 +1538,20 @@ export default function AdminDashboard() {
                   Analytics
                 </div>
               </button>
+
+              <button
+  onClick={() => setActiveTab("about")}
+  className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
+    activeTab === "about"
+      ? "border-black text-black"
+      : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+  }`}
+>
+  <div className="flex items-center gap-2">
+    <FileText className="w-4 h-4" />
+    About Page
+  </div>
+</button>
             </nav>
           </div>
         </div>
@@ -2389,6 +2405,8 @@ export default function AdminDashboard() {
             </div>
           </div>
         )}
+
+        {activeTab === "about" && <AboutPageEditor />}
 
         {/* Edit Modal (Team Member) */}
         {editingMember && (

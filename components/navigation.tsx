@@ -24,6 +24,7 @@ export function Navigation() {
   const [menuHierarchy, setMenuHierarchy] = useState<MenuItem[]>([])
   const [loading, setLoading] = useState(true)
   const [expandedMobileMenus, setExpandedMobileMenus] = useState<Set<string>>(new Set())
+  const [expandedDesktopMenus, setExpandedDesktopMenus] = useState<Set<string>>(new Set())
 
   useEffect(() => {
     const loadData = async () => {
@@ -117,8 +118,28 @@ export function Navigation() {
     setExpandedMobileMenus(newExpanded)
   }
 
+  // Toggle desktop menu expansion
+  const toggleDesktopMenu = (menuId: string, e: React.MouseEvent) => {
+    e.stopPropagation()
+    e.preventDefault()
+    const newExpanded = new Set(expandedDesktopMenus)
+    if (newExpanded.has(menuId)) {
+      newExpanded.delete(menuId)
+    } else {
+      newExpanded.add(menuId)
+    }
+    setExpandedDesktopMenus(newExpanded)
+  }
+
+  // Close all desktop menus when team menu closes
+  useEffect(() => {
+    if (!teamMenuOpen) {
+      setExpandedDesktopMenus(new Set())
+    }
+  }, [teamMenuOpen])
+
   // Render desktop team menu recursively
-  const renderDesktopTeamMenu = (menus: MenuItem[]) => {
+  const renderDesktopTeamMenu = (menus: MenuItem[], level = 0) => {
     if (loading) {
       return <div className="px-4 py-3 text-sm text-gray-500">Loading team structure...</div>
     }
@@ -126,24 +147,55 @@ export function Navigation() {
       return <div className="px-4 py-3 text-sm text-gray-500">No team sections configured.</div>
     }
 
-    return menus.map((menu) => (
-      <div key={menu.id} className="mb-1 last:mb-0">
-        <Link
-          href={`/team/${menu.id}`}
-          className="block px-4 py-2 font-semibold text-gray-900 hover:bg-gray-50 rounded hover:text-black"
-          onClick={() => setTeamMenuOpen(false)}
-        >
-          {menu.title}
-        </Link>
-        
-        {/* Render children if they exist */}
-        {menu.children && menu.children.length > 0 && (
-          <div className="ml-4 mt-1 border-l border-gray-200 pl-2 space-y-1">
-            {renderDesktopTeamMenu(menu.children)}
+    return menus.map((menu) => {
+      const isExpanded = expandedDesktopMenus.has(menu.id)
+      const hasChildren = menu.children && menu.children.length > 0
+      
+      return (
+        <div key={menu.id} className="mb-1 last:mb-0">
+          <div className="flex items-center justify-between hover:bg-gray-50 rounded px-2">
+            <Link
+              href={`/team/${menu.id}`}
+              className={`flex-1 px-2 py-2 font-semibold text-gray-900 hover:text-black rounded ${
+                level > 0 ? "text-sm" : ""
+              }`}
+              onClick={(e) => {
+                if (hasChildren) {
+                  e.preventDefault()
+                  toggleDesktopMenu(menu.id, e)
+                } else {
+                  setTeamMenuOpen(false)
+                }
+              }}
+              style={{ paddingLeft: `${level * 16 + 8}px` }}
+            >
+              {menu.title}
+            </Link>
+            
+            {hasChildren && (
+              <button
+                onClick={(e) => toggleDesktopMenu(menu.id, e)}
+                className="p-1 hover:bg-gray-200 rounded"
+                aria-label={isExpanded ? `Collapse ${menu.title}` : `Expand ${menu.title}`}
+              >
+                <ChevronRight 
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    isExpanded ? 'rotate-90' : ''
+                  }`} 
+                />
+              </button>
+            )}
           </div>
-        )}
-      </div>
-    ))
+          
+          {/* Render children if expanded */}
+          {isExpanded && hasChildren && menu.children && (
+            <div className="mt-1">
+              {renderDesktopTeamMenu(menu.children, level + 1)}
+            </div>
+          )}
+        </div>
+      )
+    })
   }
 
   // Recursive function to render mobile team menu
@@ -153,14 +205,23 @@ export function Navigation() {
       const hasChildren = menu.children && menu.children.length > 0
 
       return (
-        <div key={menu.id} className={level > 0 ? 'ml-4' : ''}>
-          <div className="flex items-center justify-between py-2">
+        <div key={menu.id} className={level > 0 ? 'border-l border-gray-200 ml-4 pl-4' : ''}>
+          <div className="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
             <Link
               href={`/team/${menu.id}`}
-              className={`flex-1 text-sm font-medium text-gray-700 hover:text-black ${level > 0 ? 'pl-2' : ''}`}
-              onClick={() => setIsOpen(false)}
+              className={`flex-1 text-gray-700 hover:text-black ${
+                level > 0 ? 'text-sm' : 'font-medium'
+              }`}
+              onClick={(e) => {
+                if (hasChildren) {
+                  e.preventDefault()
+                  toggleMobileMenu(menu.id)
+                } else {
+                  setIsOpen(false)
+                }
+              }}
             >
-              {'— '.repeat(level)}{menu.title}
+              {menu.title}
             </Link>
             
             {hasChildren && (
@@ -170,17 +231,17 @@ export function Navigation() {
                   e.stopPropagation()
                   toggleMobileMenu(menu.id)
                 }}
-                className="p-1 hover:bg-gray-100 rounded"
+                className="p-1 hover:bg-gray-200 rounded"
                 aria-label={isExpanded ? `Collapse ${menu.title}` : `Expand ${menu.title}`}
               >
-                <ChevronRight className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
+                <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`} />
               </button>
             )}
           </div>
           
           {/* Render children if expanded */}
           {isExpanded && hasChildren && menu.children && (
-            <div className="ml-4 border-l border-gray-200 pl-4">
+            <div className="mt-1">
               {renderMobileTeamMenu(menu.children, level + 1)}
             </div>
           )}
@@ -249,7 +310,10 @@ export function Navigation() {
               </button>
               
               {teamMenuOpen && (
-                <div className="absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 overflow-y-auto max-h-[80vh] z-50 p-3">
+                <div 
+                  className="absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 overflow-y-auto max-h-[80vh] z-50 p-2"
+                  onMouseLeave={() => setTeamMenuOpen(false)}
+                >
                   {renderDesktopTeamMenu(menuHierarchy)}
                 </div>
               )}
@@ -294,12 +358,12 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden pb-4 border-t border-gray-200">
-            <div className="space-y-2 py-4">
+            <div className="space-y-1 py-4">
               {links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                  className="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

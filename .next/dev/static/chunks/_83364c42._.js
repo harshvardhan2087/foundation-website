@@ -76,6 +76,7 @@ function Navigation() {
     const [menuHierarchy, setMenuHierarchy] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     const [expandedMobileMenus, setExpandedMobileMenus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(new Set());
+    const [expandedDesktopMenus, setExpandedDesktopMenus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(new Set());
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navigation.useEffect": ()=>{
             const loadData = {
@@ -165,15 +166,37 @@ function Navigation() {
         }
         setExpandedMobileMenus(newExpanded);
     };
+    // Toggle desktop menu expansion
+    const toggleDesktopMenu = (menuId, e)=>{
+        e.stopPropagation();
+        e.preventDefault();
+        const newExpanded = new Set(expandedDesktopMenus);
+        if (newExpanded.has(menuId)) {
+            newExpanded.delete(menuId);
+        } else {
+            newExpanded.add(menuId);
+        }
+        setExpandedDesktopMenus(newExpanded);
+    };
+    // Close all desktop menus when team menu closes
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Navigation.useEffect": ()=>{
+            if (!teamMenuOpen) {
+                setExpandedDesktopMenus(new Set());
+            }
+        }
+    }["Navigation.useEffect"], [
+        teamMenuOpen
+    ]);
     // Render desktop team menu recursively
-    const renderDesktopTeamMenu = (menus)=>{
+    const renderDesktopTeamMenu = (menus, level = 0)=>{
         if (loading) {
             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "px-4 py-3 text-sm text-gray-500",
                 children: "Loading team structure..."
             }, void 0, false, {
                 fileName: "[project]/components/navigation.tsx",
-                lineNumber: 123,
+                lineNumber: 144,
                 columnNumber: 14
             }, this);
         }
@@ -183,37 +206,76 @@ function Navigation() {
                 children: "No team sections configured."
             }, void 0, false, {
                 fileName: "[project]/components/navigation.tsx",
-                lineNumber: 126,
+                lineNumber: 147,
                 columnNumber: 14
             }, this);
         }
-        return menus.map((menu)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        return menus.map((menu)=>{
+            const isExpanded = expandedDesktopMenus.has(menu.id);
+            const hasChildren = menu.children && menu.children.length > 0;
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mb-1 last:mb-0",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        href: `/team/${menu.id}`,
-                        className: "block px-4 py-2 font-semibold text-gray-900 hover:bg-gray-50 rounded hover:text-black",
-                        onClick: ()=>setTeamMenuOpen(false),
-                        children: menu.title
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center justify-between hover:bg-gray-50 rounded px-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: `/team/${menu.id}`,
+                                className: `flex-1 px-2 py-2 font-semibold text-gray-900 hover:text-black rounded ${level > 0 ? "text-sm" : ""}`,
+                                onClick: (e)=>{
+                                    if (hasChildren) {
+                                        e.preventDefault();
+                                        toggleDesktopMenu(menu.id, e);
+                                    } else {
+                                        setTeamMenuOpen(false);
+                                    }
+                                },
+                                style: {
+                                    paddingLeft: `${level * 16 + 8}px`
+                                },
+                                children: menu.title
+                            }, void 0, false, {
+                                fileName: "[project]/components/navigation.tsx",
+                                lineNumber: 157,
+                                columnNumber: 13
+                            }, this),
+                            hasChildren && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: (e)=>toggleDesktopMenu(menu.id, e),
+                                className: "p-1 hover:bg-gray-200 rounded",
+                                "aria-label": isExpanded ? `Collapse ${menu.title}` : `Expand ${menu.title}`,
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
+                                    className: `w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`
+                                }, void 0, false, {
+                                    fileName: "[project]/components/navigation.tsx",
+                                    lineNumber: 181,
+                                    columnNumber: 17
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/components/navigation.tsx",
+                                lineNumber: 176,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/components/navigation.tsx",
-                        lineNumber: 131,
-                        columnNumber: 9
-                    }, this),
-                    menu.children && menu.children.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "ml-4 mt-1 border-l border-gray-200 pl-2 space-y-1",
-                        children: renderDesktopTeamMenu(menu.children)
-                    }, void 0, false, {
-                        fileName: "[project]/components/navigation.tsx",
-                        lineNumber: 141,
+                        lineNumber: 156,
                         columnNumber: 11
+                    }, this),
+                    isExpanded && hasChildren && menu.children && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-1",
+                        children: renderDesktopTeamMenu(menu.children, level + 1)
+                    }, void 0, false, {
+                        fileName: "[project]/components/navigation.tsx",
+                        lineNumber: 192,
+                        columnNumber: 13
                     }, this)
                 ]
             }, menu.id, true, {
                 fileName: "[project]/components/navigation.tsx",
-                lineNumber: 130,
-                columnNumber: 7
-            }, this));
+                lineNumber: 155,
+                columnNumber: 9
+            }, this);
+        });
     };
     // Recursive function to render mobile team menu
     const renderMobileTeamMenu = (menus, level = 0)=>{
@@ -221,22 +283,26 @@ function Navigation() {
             const isExpanded = expandedMobileMenus.has(menu.id);
             const hasChildren = menu.children && menu.children.length > 0;
             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: level > 0 ? 'ml-4' : '',
+                className: level > 0 ? 'border-l border-gray-200 ml-4 pl-4' : '',
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center justify-between py-2",
+                        className: "flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: `/team/${menu.id}`,
-                                className: `flex-1 text-sm font-medium text-gray-700 hover:text-black ${level > 0 ? 'pl-2' : ''}`,
-                                onClick: ()=>setIsOpen(false),
-                                children: [
-                                    '— '.repeat(level),
-                                    menu.title
-                                ]
-                            }, void 0, true, {
+                                className: `flex-1 text-gray-700 hover:text-black ${level > 0 ? 'text-sm' : 'font-medium'}`,
+                                onClick: (e)=>{
+                                    if (hasChildren) {
+                                        e.preventDefault();
+                                        toggleMobileMenu(menu.id);
+                                    } else {
+                                        setIsOpen(false);
+                                    }
+                                },
+                                children: menu.title
+                            }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
-                                lineNumber: 158,
+                                lineNumber: 210,
                                 columnNumber: 13
                             }, this),
                             hasChildren && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -245,38 +311,38 @@ function Navigation() {
                                     e.stopPropagation();
                                     toggleMobileMenu(menu.id);
                                 },
-                                className: "p-1 hover:bg-gray-100 rounded",
+                                className: "p-1 hover:bg-gray-200 rounded",
                                 "aria-label": isExpanded ? `Collapse ${menu.title}` : `Expand ${menu.title}`,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                                    className: `w-4 h-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`
+                                    className: `w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 176,
+                                    lineNumber: 237,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
-                                lineNumber: 167,
+                                lineNumber: 228,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/navigation.tsx",
-                        lineNumber: 157,
+                        lineNumber: 209,
                         columnNumber: 11
                     }, this),
                     isExpanded && hasChildren && menu.children && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "ml-4 border-l border-gray-200 pl-4",
+                        className: "mt-1",
                         children: renderMobileTeamMenu(menu.children, level + 1)
                     }, void 0, false, {
                         fileName: "[project]/components/navigation.tsx",
-                        lineNumber: 183,
+                        lineNumber: 244,
                         columnNumber: 13
                     }, this)
                 ]
             }, menu.id, true, {
                 fileName: "[project]/components/navigation.tsx",
-                lineNumber: 156,
+                lineNumber: 208,
                 columnNumber: 9
             }, this);
         });
@@ -307,7 +373,7 @@ function Navigation() {
                 className: "w-4 h-4"
             }, void 0, false, {
                 fileName: "[project]/components/navigation.tsx",
-                lineNumber: 203,
+                lineNumber: 264,
                 columnNumber: 13
             }, this),
             ariaLabel: "Visit our Facebook page"
@@ -319,7 +385,7 @@ function Navigation() {
                 className: "w-4 h-4"
             }, void 0, false, {
                 fileName: "[project]/components/navigation.tsx",
-                lineNumber: 209,
+                lineNumber: 270,
                 columnNumber: 13
             }, this),
             ariaLabel: "Visit our Instagram page"
@@ -331,7 +397,7 @@ function Navigation() {
                 className: "w-4 h-4"
             }, void 0, false, {
                 fileName: "[project]/components/navigation.tsx",
-                lineNumber: 215,
+                lineNumber: 276,
                 columnNumber: 13
             }, this),
             ariaLabel: "Visit our YouTube channel"
@@ -358,12 +424,12 @@ function Navigation() {
                                         width: 50
                                     }, void 0, false, {
                                         fileName: "[project]/components/navigation.tsx",
-                                        lineNumber: 227,
+                                        lineNumber: 288,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 226,
+                                    lineNumber: 287,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -371,13 +437,13 @@ function Navigation() {
                                     children: "Aapka Sahyog Foundation"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 229,
+                                    lineNumber: 290,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/navigation.tsx",
-                            lineNumber: 225,
+                            lineNumber: 286,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -389,7 +455,7 @@ function Navigation() {
                                         children: link.label
                                     }, link.href, false, {
                                         fileName: "[project]/components/navigation.tsx",
-                                        lineNumber: 235,
+                                        lineNumber: 296,
                                         columnNumber: 15
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -405,33 +471,34 @@ function Navigation() {
                                                     className: `w-4 h-4 transition-transform ${teamMenuOpen ? 'rotate-180' : ''}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/navigation.tsx",
-                                                    lineNumber: 248,
+                                                    lineNumber: 309,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/navigation.tsx",
-                                            lineNumber: 242,
+                                            lineNumber: 303,
                                             columnNumber: 15
                                         }, this),
                                         teamMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 overflow-y-auto max-h-[80vh] z-50 p-3",
+                                            className: "absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 overflow-y-auto max-h-[80vh] z-50 p-2",
+                                            onMouseLeave: ()=>setTeamMenuOpen(false),
                                             children: renderDesktopTeamMenu(menuHierarchy)
                                         }, void 0, false, {
                                             fileName: "[project]/components/navigation.tsx",
-                                            lineNumber: 252,
+                                            lineNumber: 313,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 241,
+                                    lineNumber: 302,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/navigation.tsx",
-                            lineNumber: 233,
+                            lineNumber: 294,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -448,12 +515,12 @@ function Navigation() {
                                             children: social.icon
                                         }, social.href, false, {
                                             fileName: "[project]/components/navigation.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 327,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 261,
+                                    lineNumber: 325,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -462,13 +529,13 @@ function Navigation() {
                                     children: "Donate Now"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 276,
+                                    lineNumber: 340,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/navigation.tsx",
-                            lineNumber: 260,
+                            lineNumber: 324,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -479,40 +546,40 @@ function Navigation() {
                                 size: 20
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
-                                lineNumber: 290,
+                                lineNumber: 354,
                                 columnNumber: 23
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                 size: 20
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
-                                lineNumber: 290,
+                                lineNumber: 354,
                                 columnNumber: 41
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/navigation.tsx",
-                            lineNumber: 285,
+                            lineNumber: 349,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/navigation.tsx",
-                    lineNumber: 223,
+                    lineNumber: 284,
                     columnNumber: 9
                 }, this),
                 isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "lg:hidden pb-4 border-t border-gray-200",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "space-y-2 py-4",
+                            className: "space-y-1 py-4",
                             children: [
                                 links.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: link.href,
-                                        className: "block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors",
+                                        className: "block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors",
                                         onClick: ()=>setIsOpen(false),
                                         children: link.label
                                     }, link.href, false, {
                                         fileName: "[project]/components/navigation.tsx",
-                                        lineNumber: 299,
+                                        lineNumber: 363,
                                         columnNumber: 17
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -523,7 +590,7 @@ function Navigation() {
                                             children: "Team"
                                         }, void 0, false, {
                                             fileName: "[project]/components/navigation.tsx",
-                                            lineNumber: 311,
+                                            lineNumber: 375,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -533,31 +600,31 @@ function Navigation() {
                                                 children: "Loading..."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/navigation.tsx",
-                                                lineNumber: 314,
+                                                lineNumber: 378,
                                                 columnNumber: 21
                                             }, this) : menuHierarchy.length > 0 ? renderMobileTeamMenu(menuHierarchy) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "px-2 py-2 text-sm text-gray-500",
                                                 children: "No team sections found."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/navigation.tsx",
-                                                lineNumber: 318,
+                                                lineNumber: 382,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/navigation.tsx",
-                                            lineNumber: 312,
+                                            lineNumber: 376,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 310,
+                                    lineNumber: 374,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/navigation.tsx",
-                            lineNumber: 297,
+                            lineNumber: 361,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -568,7 +635,7 @@ function Navigation() {
                                     children: "Follow Us"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 326,
+                                    lineNumber: 390,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -583,18 +650,18 @@ function Navigation() {
                                             children: social.icon
                                         }, social.href, false, {
                                             fileName: "[project]/components/navigation.tsx",
-                                            lineNumber: 329,
+                                            lineNumber: 393,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
-                                    lineNumber: 327,
+                                    lineNumber: 391,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/navigation.tsx",
-                            lineNumber: 325,
+                            lineNumber: 389,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -606,33 +673,33 @@ function Navigation() {
                                 children: "Donate Now"
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
-                                lineNumber: 346,
+                                lineNumber: 410,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/navigation.tsx",
-                            lineNumber: 345,
+                            lineNumber: 409,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/navigation.tsx",
-                    lineNumber: 296,
+                    lineNumber: 360,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/navigation.tsx",
-            lineNumber: 222,
+            lineNumber: 283,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/navigation.tsx",
-        lineNumber: 221,
+        lineNumber: 282,
         columnNumber: 5
     }, this);
 }
-_s(Navigation, "h1cUsVLUCBsbWDEuGjvMNuqQX1E=");
+_s(Navigation, "Auuy9Td4Pue+BpZjP/gOj2vtXoc=");
 _c = Navigation;
 var _c;
 __turbopack_context__.k.register(_c, "Navigation");

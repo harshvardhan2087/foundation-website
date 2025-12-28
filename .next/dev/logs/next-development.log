@@ -1,47 +1,26 @@
-[00:00:04.161] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:04.719] Server  LOG      ✓ Ready in 3.2s
-[00:01:50.674] Server  LOG      ○ Compiling / ...
-[00:01:55.719] Browser LOG     Fetching banners from Firestore...
-[00:01:55.719] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:55.719] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:01:55.719] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766859047986}
-[00:01:57.394] Browser LOG     Found 0 banners
-[00:01:57.394] Browser LOG     ✅ 0 active banners loaded successfully
-[00:01:57.394] Browser LOG     No active banners found, using fallback
-[00:01:57.394] Browser LOG     Fetching banners from Firestore...
-[00:01:57.394] Browser LOG     Found 0 banners
-[00:01:57.394] Browser LOG     ✅ 0 active banners loaded successfully
-[00:01:57.394] Browser LOG     No active banners found, using fallback
-[00:02:02.247] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766859054520}
-[00:02:04.460] Browser WARN    Image with src "/donation2.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:04.460] Browser WARN    Image with src "/donation3.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:04.460] Browser WARN    Image with src "/donation1.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:04.460] Browser WARN    Image with src "/donation6.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:04.460] Browser WARN    Image with src "/donation5.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:04.693] Browser WARN    Image with src "/donation4.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:14.191] Browser WARN    Image with src "/donation10.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:14.191] Browser WARN    Image with src "/donation8.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:14.191] Browser WARN    Image with src "/donation7.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:14.306] Browser WARN    Image with src "/donation9.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:15.090] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/donation11.jpeg" "received" null
-[00:02:46.876] Server  LOG      ✓ Compiled in 159ms
-[00:02:47.094] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/donation11.jpeg" "received" null
-[00:02:50.822] Server  LOG      ✓ Compiled in 158ms
-[00:02:51.705] Browser WARN    Image with src "/donation12.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:55.334] Server  LOG      ✓ Compiled in 147ms
-[00:02:58.628] Server  LOG      ✓ Compiled in 123ms
-[00:03:02.450] Server  LOG      ✓ Compiled in 90ms
-[00:03:11.455] Browser WARN    Image with src "/donation13.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:11.955] Browser WARN    Image with src "/donation14.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:16.147] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/donation11.jpeg" "received" null
-[00:03:26.793] Server  LOG      ✓ Compiled in 211ms
-[00:10:44.902] Server  LOG      ✓ Compiled in 447ms
-[00:10:45.702] Browser WARN    Image with src "/images/asf-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:12:15.318] Server  LOG      ✓ Compiled in 142ms
-[00:12:23.697] Server  LOG      ✓ Compiled in 150ms
-[00:12:24.871] Server  LOG      ✓ Compiled in 171ms
-[00:12:26.719] Server  LOG      ✓ Compiled in 152ms
-[00:12:43.410] Server  LOG      ✓ Compiled in 146ms
-[00:13:07.369] Server  LOG      ✓ Compiled in 93ms
-[00:13:23.484] Server  LOG      ✓ Compiled in 154ms
-[00:13:26.582] Server  LOG      ✓ Compiled in 173ms
+[00:00:03.008] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:03.550] Server  LOG      ✓ Ready in 2.6s
+[00:05:17.608] Server  LOG      ○ Compiling / ...
+[00:05:25.325] Browser LOG     Fetching banners from Firestore...
+[00:05:25.325] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:25.325] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:05:25.326] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766941451688}
+[00:05:27.139] Browser LOG     Found 0 banners
+[00:05:27.139] Browser LOG     ✅ 0 active banners loaded successfully
+[00:05:27.139] Browser LOG     No active banners found, using fallback
+[00:05:27.139] Browser LOG     Fetching banners from Firestore...
+[00:05:27.139] Browser LOG     Found 0 banners
+[00:05:27.139] Browser LOG     ✅ 0 active banners loaded successfully
+[00:05:27.139] Browser LOG     No active banners found, using fallback
+[00:05:53.403] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766941479768}
+[00:22:11.105] Server  LOG      ✓ Compiled in 258ms
+[00:32:15.196] Browser WARN    Image with src "/images/asf-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:32:40.641] Browser LOG     Loading team members from Firestore...
+[00:32:40.641] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:32:40.641] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[00:32:40.641] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766943087008}
+[00:32:41.509] Browser LOG     ✅ Loaded 44 team members
+[00:32:41.509] Browser LOG     Loading menu items from Firestore...
+[00:32:41.509] Browser LOG     ✅ Loaded 10 menu items
+[00:32:41.509] Browser LOG     🔄 Setting up Firestore real-time listener...
+[00:32:41.509] Browser LOG     🔄 Setting up menu items real-time listener...
