@@ -18,6 +18,7 @@ import {
   serverTimestamp
 } from "firebase/firestore"
 import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage"
+import ContactPageEditor from "@/components/admin/ContactPageEditor"
 import { 
   Star, 
   MapPin, 
@@ -62,12 +63,16 @@ import {
   Activity,
   Eye as EyeIcon,
   Users as UsersIcon,
-  RefreshCw
+  RefreshCw,
+  MessageSquare,
+  BookOpen
 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { FileText } from "lucide-react"
 import AboutPageEditor from "@/components/admin/AboutPageEditor"
+import WorkPageEditor from "@/components/admin/WorkPageEditor"
+import HomePageEditor from "@/components/admin/HomePageEditor"
 
 interface TeamMember {
   id: string
@@ -136,7 +141,7 @@ export default function AdminDashboard() {
   })
   const [editingMember, setEditingMember] = useState<TeamMember | null>(null)
   const [editingMenuItem, setEditingMenuItem] = useState<MenuItem | null>(null)
-  const [activeTab, setActiveTab] = useState<"team" | "banners" | "analytics" | "about">("team")
+  const [activeTab, setActiveTab] = useState<"team" | "banners" | "analytics" | "about"| "contact" | "work" | "home">("team")
   const [selectedMenuId, setSelectedMenuId] = useState<string | null>(null)
   const [showMenuForm, setShowMenuForm] = useState(false)
   const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set())
@@ -1552,6 +1557,47 @@ export default function AdminDashboard() {
     About Page
   </div>
 </button>
+
+<button
+  onClick={() => setActiveTab("contact")}
+  className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
+    activeTab === "contact"
+      ? "border-black text-black"
+      : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+  }`}
+>
+  <div className="flex items-center gap-2">
+    <MessageSquare className="w-4 h-4" />
+    Contact Page
+  </div>
+</button>
+
+<button
+  onClick={() => setActiveTab("work")}
+  className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
+    activeTab === "work"
+      ? "border-black text-black"
+      : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+  }`}
+>
+  <div className="flex items-center gap-2">
+    <BookOpen className="w-4 h-4" />
+    Work Page
+  </div>
+</button>
+<button
+  onClick={() => setActiveTab("home")}
+  className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
+    activeTab === "home"
+      ? "border-black text-black"
+      : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+  }`}
+>
+  <div className="flex items-center gap-2">
+    <Home className="w-4 h-4" />
+    Home Page
+  </div>
+</button>
             </nav>
           </div>
         </div>
@@ -2407,6 +2453,11 @@ export default function AdminDashboard() {
         )}
 
         {activeTab === "about" && <AboutPageEditor />}
+        {activeTab === "contact" && <ContactPageEditor />}
+        {activeTab === "work" && <WorkPageEditor />}
+        {activeTab === "home" && <HomePageEditor />}
+
+
 
         {/* Edit Modal (Team Member) */}
         {editingMember && (

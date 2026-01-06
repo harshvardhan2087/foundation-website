@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useState, useEffect, JSX } from "react"
 import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import { collection, query, orderBy, getDocs } from "firebase/firestore"

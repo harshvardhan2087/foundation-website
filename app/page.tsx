@@ -39,11 +39,12 @@ import {
   TreePine,
   ShieldCheck,
   ExternalLink,
+  Award,
 } from "lucide-react"
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { db } from "@/lib/firebase"
-import { collection, getDocs, query, orderBy } from "firebase/firestore"
+import { doc, getDoc, collection, query, orderBy, onSnapshot, getDocs } from "firebase/firestore"
 
 interface Banner {
   id: string
@@ -60,6 +61,99 @@ interface Stat {
   label: string
   description: string
   order: number
+  active: boolean
+}
+
+interface YoutubeVideo {
+  id: string
+  videoId: string
+  description: string
+  order: number
+  active: boolean
+}
+
+interface Achievement {
+  id: string
+  year: string
+  title: string
+  description: string
+  icon: string
+  order: number
+  active: boolean
+}
+
+interface Testimonial {
+  id: string
+  name: string
+  role: string
+  text: string
+  location: string
+  image: string
+  order: number
+  active: boolean
+}
+
+interface Partner {
+  id: string
+  name: string
+  logo: string
+  order: number
+  active: boolean
+}
+
+interface WorkGalleryItem {
+  id: string
+  image: string
+  description?: string
+  order: number
+  active: boolean
+}
+
+interface SocialMedia {
+  youtube: string
+  facebook: string
+  instagram: string
+  twitter: string
+  linkedin: string
+}
+
+interface CTASection {
+  title: string
+  description: string
+  donationText: string
+  volunteerText: string
+  stats: Array<{
+    value: string
+    label: string
+  }>
+}
+
+interface HomePageData {
+  aboutTitle: string
+  aboutDescription: string
+  mission: string
+  vision: string
+  aboutImages: string[]
+  workGalleryTitle: string
+  workGalleryDescription: string
+  featuredWorkTitle: string
+  featuredWorkDescription: string
+  videosTitle: string
+  videosDescription: string
+  milestonesTitle: string
+  milestonesDescription: string
+  testimonialsTitle: string
+  testimonialsDescription: string
+  partnersTitle: string
+  partnersDescription: string
+  ctaSection: CTASection
+  socialMedia: SocialMedia
+  stats: Stat[]
+  youtubeVideos: YoutubeVideo[]
+  achievements: Achievement[]
+  testimonials: Testimonial[]
+  partners: Partner[]
+  workGallery: WorkGalleryItem[]
 }
 
 export default function Home() {
@@ -68,7 +162,7 @@ export default function Home() {
   
   // State for dynamic content
   const [banners, setBanners] = useState<Banner[]>([])
-  const [stats, setStats] = useState<Stat[]>([])
+  const [homeData, setHomeData] = useState<HomePageData | null>(null)
   const [loading, setLoading] = useState(true)
   const [bannerError, setBannerError] = useState<string | null>(null)
 
@@ -94,19 +188,99 @@ export default function Home() {
       setLoading(true)
       setBannerError(null)
       
-      // Fetch banners - get all and filter locally to avoid index requirement
-      console.log("Fetching banners from Firestore...")
-      const bannersQuery = query(
-        collection(db, "homeBanners"), 
-        orderBy("order") // Only order by, no where clause to avoid index requirement
-      )
+      // Load home page data
+      const homeDoc = await getDoc(doc(db, "homePage", "data"))
+      if (homeDoc.exists()) {
+        setHomeData(homeDoc.data() as HomePageData)
+      } else {
+        // Fallback to default data
+        setHomeData({
+          aboutTitle: "Building a Better Tomorrow, Together",
+          aboutDescription: "Established with a vision to create sustainable social impact, Aapka Sahyog Foundation works tirelessly to uplift marginalized communities through comprehensive development programs across Uttar Pradesh.",
+          mission: "To empower communities through sustainable development initiatives",
+          vision: "A society where every individual has access to opportunities and dignity",
+          aboutImages: [
+            "/images/team-activity-1.png",
+            "/images/team-award.png",
+            "/images/our-work-3.png",
+            "/images/our-work-4.png"
+          ],
+          workGalleryTitle: "Impact in Action",
+          workGalleryDescription: "Witness the transformative work we're doing across communities in Uttar Pradesh",
+          featuredWorkTitle: "Community Development in Rural Uttar Pradesh",
+          featuredWorkDescription: "Transforming lives through integrated development programs",
+          videosTitle: "Watch Our Impact Stories",
+          videosDescription: "Experience the transformative work through our video documentation",
+          milestonesTitle: "Milestones of Impact",
+          milestonesDescription: "",
+          testimonialsTitle: "Stories of Transformation",
+          testimonialsDescription: "",
+          partnersTitle: "Trusted by Leading Organizations",
+          partnersDescription: "",
+          ctaSection: {
+            title: "Together, We Can Make a Difference",
+            description: "Your support enables us to continue our vital work in education, healthcare, environment, and community development.",
+            donationText: "Make a Donation",
+            volunteerText: "Become a Volunteer",
+            stats: [
+              { value: "100%", label: "Transparent" },
+              { value: "45+", label: "Objectives" },
+              { value: "24/7", label: "Support" }
+            ]
+          },
+          socialMedia: {
+            youtube: "https://youtube.com/@aapkasahyogfoundation",
+            facebook: "https://www.facebook.com/share/1SpxhPXM8r/",
+            instagram: "https://www.instagram.com/aapkasahyogfoundation",
+            twitter: "",
+            linkedin: ""
+          },
+          stats: [
+            { id: "1", number: "50+", label: "Communities Served", description: "Across Uttar Pradesh", order: 0, active: true },
+            { id: "2", number: "5000+", label: "Lives Impacted", description: "Through our programs", order: 1, active: true },
+            { id: "3", number: "20+", label: "Active Programs", description: "In multiple sectors", order: 2, active: true },
+            { id: "4", number: "45+", label: "Social Objectives", description: "For comprehensive development", order: 3, active: true }
+          ],
+          youtubeVideos: [
+            { id: "1", videoId: "l7TkcC_o36k", description: "Our journey and impact story", order: 0, active: true },
+            { id: "2", videoId: "szEHs0kxGX4", description: "Youth training in action", order: 1, active: true },
+            { id: "3", videoId: "xUg5cXIv6UY", description: "Medical services in rural areas", order: 2, active: true },
+            { id: "4", videoId: "6ivD8ryf4Bo", description: "Clean Green India Mission activities", order: 3, active: true }
+          ],
+          achievements: [
+            { id: "1", year: "2023", title: "Foundation Registration", description: "Registered as Non-Profit Organization", icon: "Shield", order: 0, active: true },
+            { id: "2", year: "2024", title: "Clean Green India", description: "Active participant in national mission", icon: "Leaf", order: 1, active: true },
+            { id: "3", year: "2024", title: "50+ Communities", description: "Expanded operations across Uttar Pradesh", icon: "MapPin", order: 2, active: true },
+            { id: "4", year: "2025", title: "Skill Centers", description: "Multiple vocational training centers launched", icon: "GraduationCap", order: 3, active: true }
+          ],
+          testimonials: [
+            { id: "1", name: "Rajesh Kumar", role: "Skill Training Beneficiary", text: "The poultry farming training changed my life. I now run my own successful business.", location: "Aligarh, UP", image: "/images/sonu-giri.jpeg", order: 0, active: true },
+            { id: "2", name: "Priya Sharma", role: "Women Empowerment Program", text: "The self-help group helped me start a small business and become financially independent.", location: "Jewar, UP", image: "/images/sonu-giri.jpeg", order: 1, active: true },
+            { id: "3", name: "Dr. Amit Verma", role: "Medical Volunteer", text: "Proud to be part of health camps that reach underserved communities with essential care.", location: "Medical Advisor", image: "/images/sonu-giri.jpeg", order: 2, active: true }
+          ],
+          partners: [
+            { id: "1", name: "Government of UP", logo: "/logos/gov-up.png", order: 0, active: true },
+            { id: "2", name: "Clean Green India", logo: "/logos/cgi-logo.png", order: 1, active: true },
+            { id: "3", name: "NGO Network", logo: "/logos/ngo-network.png", order: 2, active: true },
+            { id: "4", name: "Corporate Partners", logo: "/logos/corporate.png", order: 3, active: true }
+          ],
+          workGallery: [
+            { id: "1", image: "/images/team-activity-1.png", description: "", order: 0, active: true },
+            { id: "2", image: "/images/our-work-2.png", description: "", order: 1, active: true },
+            { id: "3", image: "/images/our-work-3.png", description: "", order: 2, active: true },
+            { id: "4", image: "/images/our-work-4.png", description: "", order: 3, active: true },
+            { id: "5", image: "/images/team-award.png", description: "", order: 4, active: true }
+          ]
+        })
+      }
+
+      // Fetch banners (already implemented)
+      const bannersQuery = query(collection(db, "homeBanners"), orderBy("order"))
       const bannersSnapshot = await getDocs(bannersQuery)
-      console.log(`Found ${bannersSnapshot.size} banners`)
       
       let bannersData: Banner[] = []
       bannersSnapshot.forEach((doc) => {
         const data = doc.data()
-        console.log(`Banner ${doc.id}:`, data)
         bannersData.push({
           id: doc.id,
           imageUrl: data.imageUrl || "",
@@ -117,17 +291,11 @@ export default function Home() {
         } as Banner)
       })
       
-      // Filter active banners locally
       bannersData = bannersData.filter(banner => banner.active === true)
-      
-      // Sort by order
       bannersData.sort((a, b) => a.order - b.order)
       setBanners(bannersData)
-      console.log(`✅ ${bannersData.length} active banners loaded successfully`)
 
-      // If no banners are active, show a fallback banner
       if (bannersData.length === 0) {
-        console.log("No active banners found, using fallback")
         setBanners([
           { 
             id: 'fallback', 
@@ -140,52 +308,11 @@ export default function Home() {
         ])
       }
 
-      // Fetch stats - only orderBy, no where clause to avoid index requirement
-      try {
-        const statsQuery = query(collection(db, "homeStats"), orderBy("order"))
-        const statsSnapshot = await getDocs(statsQuery)
-        const statsData: Stat[] = []
-        statsSnapshot.forEach((doc) => {
-          const data = doc.data()
-          statsData.push({
-            id: doc.id,
-            number: data.number || "",
-            label: data.label || "",
-            description: data.description || "",
-            order: data.order || 0
-          } as Stat)
-        })
-        
-        // Sort by order
-        statsData.sort((a, b) => a.order - b.order)
-        
-        // If no stats in Firestore, use fallback stats
-        if (statsData.length === 0) {
-          setStats([
-            { id: '1', number: "50+", label: "Communities Served", description: "Across Uttar Pradesh", order: 0 },
-            { id: '2', number: "5000+", label: "Lives Impacted", description: "Through our programs", order: 1 },
-            { id: '3', number: "20+", label: "Active Programs", description: "In multiple sectors", order: 2 },
-            { id: '4', number: "45+", label: "Social Objectives", description: "For comprehensive development", order: 3 },
-          ])
-        } else {
-          setStats(statsData)
-        }
-      } catch (statsError) {
-        console.error("Error loading stats:", statsError)
-        // Use fallback stats
-        setStats([
-          { id: '1', number: "50+", label: "Communities Served", description: "Across Uttar Pradesh", order: 0 },
-          { id: '2', number: "5000+", label: "Lives Impacted", description: "Through our programs", order: 1 },
-          { id: '3', number: "20+", label: "Active Programs", description: "In multiple sectors", order: 2 },
-          { id: '4', number: "45+", label: "Social Objectives", description: "For comprehensive development", order: 3 },
-        ])
-      }
-
     } catch (error: any) {
       console.error("❌ Error fetching home page data:", error)
-      setBannerError(`Failed to load banners: ${error.message}`)
+      setBannerError(`Failed to load content: ${error.message}`)
       
-      // Use fallback banner if Firestore fails
+      // Use fallback data
       setBanners([
         { 
           id: 'fallback', 
@@ -195,13 +322,6 @@ export default function Home() {
           order: 0, 
           active: true 
         }
-      ])
-      
-      setStats([
-        { id: '1', number: "50+", label: "Communities Served", description: "Across Uttar Pradesh", order: 0 },
-        { id: '2', number: "5000+", label: "Lives Impacted", description: "Through our programs", order: 1 },
-        { id: '3', number: "20+", label: "Active Programs", description: "In multiple sectors", order: 2 },
-        { id: '4', number: "45+", label: "Social Objectives", description: "For comprehensive development", order: 3 },
       ])
     } finally {
       setLoading(false)
@@ -213,11 +333,9 @@ export default function Home() {
     console.error(`Failed to load banner image: ${banners[bannerIndex]?.imageUrl}`)
     const img = e.target as HTMLImageElement
     
-    // Try to use the fallback image
     img.src = '/images/banner.png'
-    img.onerror = null // Prevent infinite loop
+    img.onerror = null
     
-    // Update the banner with fallback image
     const updatedBanners = [...banners]
     updatedBanners[bannerIndex] = {
       ...updatedBanners[bannerIndex],
@@ -226,59 +344,25 @@ export default function Home() {
     setBanners(updatedBanners)
   }
 
-  // YouTube Videos
-  const youtubeVideos = [
-    { id: "l7TkcC_o36k",  description: "Our journey and impact story" },
-    { id: "szEHs0kxGX4", description: "Youth training in action" },
-    { id: "xUg5cXIv6UY",  description: "Medical services in rural areas" },
-    { id: "6ivD8ryf4Bo",description: "Clean Green India Mission activities" },
-  ]
-
-  const achievements = [
-    { year: "2023", title: "Foundation Registration", description: "Registered as Non-Profit Organization", icon: Shield },
-    { year: "2024", title: "Clean Green India", description: "Active participant in national mission", icon: Leaf },
-    { year: "2024", title: "50+ Communities", description: "Expanded operations across Uttar Pradesh", icon: MapPin },
-    { year: "2025", title: "Skill Centers", description: "Multiple vocational training centers launched", icon: GraduationCap },
-  ]
-
-  const testimonials = [
-    {
-      name: "Rajesh Kumar",
-      role: "Skill Training Beneficiary",
-      text: "The poultry farming training changed my life. I now run my own successful business.",
-      location: "Aligarh, UP",
-      image: "/images/sonu-giri.jpeg"
-    },
-    {
-      name: "Priya Sharma",
-      role: "Women Empowerment Program",
-      text: "The self-help group helped me start a small business and become financially independent.",
-      location: "Jewar, UP",
-      image: "/images/sonu-giri.jpeg"
-    },
-    {
-      name: "Dr. Amit Verma",
-      role: "Medical Volunteer",
-      text: "Proud to be part of health camps that reach underserved communities with essential care.",
-      location: "Medical Advisor",
-      image: "/images/sonu-giri.jpeg"
-    },
-  ]
-
-  const partners = [
-    { name: "Government of UP", logo: "/logos/gov-up.png" },
-    { name: "Clean Green India", logo: "/logos/cgi-logo.png" },
-    { name: "NGO Network", logo: "/logos/ngo-network.png" },
-    { name: "Corporate Partners", logo: "/logos/corporate.png" },
-  ]
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
+  const getIconComponent = (iconName: string) => {
+    switch (iconName) {
+      case "Shield": return Shield
+      case "Leaf": return Leaf
+      case "MapPin": return MapPin
+      case "GraduationCap": return GraduationCap
+      case "Users": return Users
+      case "Target": return Target
+      case "Heart": return Heart
+      case "Eye": return Eye
+      case "Activity": return Activity
+      case "TreePine": return TreePine
+      case "Award": return Award
+      case "CheckCircle": return CheckCircle
+      default: return Shield
+    }
   }
 
-  if (loading) {
+  if (loading || !homeData) {
     return (
       <>
         <Navigation />
@@ -309,7 +393,6 @@ export default function Home() {
                 transition={{ duration: 1 }}
                 className="absolute inset-0"
               >
-                {/* Use regular img tag for Firebase Storage URLs for better error handling */}
                 <img
                   src={banner.imageUrl}
                   alt={banner.title || `Foundation Banner ${index + 1}`}
@@ -398,22 +481,25 @@ export default function Home() {
         <section className="bg-gradient-to-r from-gray-900 to-black text-white py-8 sm:py-10 md:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center group px-2"
-                >
-                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2 text-yellow-400 group-hover:scale-105 transition-transform duration-300">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm sm:text-base font-semibold mb-1">{stat.label}</div>
-                  <div className="text-xs sm:text-sm opacity-80 leading-tight">{stat.description}</div>
-                </motion.div>
-              ))}
+              {homeData.stats
+                .filter(stat => stat.active)
+                .sort((a, b) => a.order - b.order)
+                .map((stat, index) => (
+                  <motion.div
+                    key={stat.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="text-center group px-2"
+                  >
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2 text-yellow-400 group-hover:scale-105 transition-transform duration-300">
+                      {stat.number}
+                    </div>
+                    <div className="text-sm sm:text-base font-semibold mb-1">{stat.label}</div>
+                    <div className="text-xs sm:text-sm opacity-80 leading-tight">{stat.description}</div>
+                  </motion.div>
+                ))}
             </div>
           </div>
         </section>
@@ -435,12 +521,10 @@ export default function Home() {
                     About Our Foundation
                   </div>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                    Building a Better Tomorrow, <span className="text-yellow-600">Together</span>
+                    {homeData.aboutTitle}
                   </h2>
                   <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                    Established with a vision to create sustainable social impact, Aapka Sahyog Foundation 
-                    works tirelessly to uplift marginalized communities through comprehensive development programs 
-                    across Uttar Pradesh.
+                    {homeData.aboutDescription}
                   </p>
                 </div>
                 
@@ -449,14 +533,14 @@ export default function Home() {
                     <Target className="text-yellow-600 mt-1 w-5 h-5 sm:w-6 sm:h-6" />
                     <div>
                       <h4 className="font-bold text-gray-900 text-sm sm:text-base">Our Mission</h4>
-                      <p className="text-gray-600 text-sm">To empower communities through sustainable development initiatives</p>
+                      <p className="text-gray-600 text-sm">{homeData.mission}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-50 rounded-lg sm:rounded-xl">
                     <Eye className="text-yellow-600 mt-1 w-5 h-5 sm:w-6 sm:h-6" />
                     <div>
                       <h4 className="font-bold text-gray-900 text-sm sm:text-base">Our Vision</h4>
-                      <p className="text-gray-600 text-sm">A society where every individual has access to opportunities and dignity</p>
+                      <p className="text-gray-600 text-sm">{homeData.vision}</p>
                     </div>
                   </div>
                 </div>
@@ -483,7 +567,7 @@ export default function Home() {
                   <div className="space-y-3 sm:space-y-4">
                     <div className="relative h-32 sm:h-36 md:h-48 rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg">
                       <Image
-                        src="/images/team-activity-1.png"
+                        src={homeData.aboutImages[0] || "/images/team-activity-1.png"}
                         alt="Community Meeting"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-300"
@@ -492,7 +576,7 @@ export default function Home() {
                     </div>
                     <div className="relative h-40 sm:h-48 md:h-64 rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg">
                       <Image
-                        src="/images/team-award.png"
+                        src={homeData.aboutImages[1] || "/images/team-award.png"}
                         alt="Training Session"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-300"
@@ -503,7 +587,7 @@ export default function Home() {
                   <div className="space-y-3 sm:space-y-4 mt-6 sm:mt-8">
                     <div className="relative h-40 sm:h-48 md:h-64 rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg">
                       <Image
-                        src="/images/our-work-3.png"
+                        src={homeData.aboutImages[2] || "/images/our-work-3.png"}
                         alt="Health Camp"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-300"
@@ -512,7 +596,7 @@ export default function Home() {
                     </div>
                     <div className="relative h-32 sm:h-36 md:h-48 rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg">
                       <Image
-                        src="/images/our-work-4.png"
+                        src={homeData.aboutImages[3] || "/images/our-work-4.png"}
                         alt="Tree Plantation"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-300"
@@ -542,10 +626,10 @@ export default function Home() {
                 <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Impact in <span className="text-yellow-600">Action</span>
+                {homeData.workGalleryTitle}
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-                Witness the transformative work we're doing across communities in Uttar Pradesh
+                {homeData.workGalleryDescription}
               </p>
             </motion.div>
             
@@ -564,45 +648,42 @@ export default function Home() {
                     <Camera className="w-3 h-3 sm:w-4 sm:h-4" />
                     Featured Work
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2">Community Development in Rural Uttar Pradesh</h3>
-                  <p className="text-white/90 text-xs sm:text-sm md:text-base max-w-2xl">Transforming lives through integrated development programs</p>
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2">{homeData.featuredWorkTitle}</h3>
+                  <p className="text-white/90 text-xs sm:text-sm md:text-base max-w-2xl">{homeData.featuredWorkDescription}</p>
                 </div>
               </div>
             </div>
             
             {/* Work Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {[
-                { image: "/images/team-activity-1.png" },
-                { image: "/images/our-work-2.png"},
-                { image: "/images/our-work-3.png"},
-                { image: "/images/our-work-4.png"},
-                { image: "/images/team-award.png"},
-              ].map((work, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group relative overflow-hidden rounded-lg sm:rounded-xl shadow-md sm:shadow-lg"
-                >
-                  <div className="relative h-48 sm:h-56 md:h-64">
-                    <Image
-                      src={work.image}
-                      alt="Work Gallery"
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-                        {/* Optional content can be added here */}
+              {homeData.workGallery
+                .filter(item => item.active)
+                .sort((a, b) => a.order - b.order)
+                .map((work, index) => (
+                  <motion.div
+                    key={work.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group relative overflow-hidden rounded-lg sm:rounded-xl shadow-md sm:shadow-lg"
+                  >
+                    <div className="relative h-48 sm:h-56 md:h-64">
+                      <Image
+                        src={work.image}
+                        alt="Work Gallery"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
+                          {/* Optional content can be added here */}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
             </div>
           </div>
         </section>
@@ -623,56 +704,59 @@ export default function Home() {
                 <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Watch Our <span className="text-yellow-400">Impact</span> Stories
+                {homeData.videosTitle}
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-3xl mx-auto px-4">
-                Experience the transformative work through our video documentation
+                {homeData.videosDescription}
               </p>
             </motion.div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {youtubeVideos.map((video, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group"
-                >
-                  <a
-                    href={`https://www.youtube.com/watch?v=${video.id}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
+              {homeData.youtubeVideos
+                .filter(video => video.active)
+                .sort((a, b) => a.order - b.order)
+                .map((video, index) => (
+                  <motion.div
+                    key={video.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group"
                   >
-                    <div className="relative rounded-lg overflow-hidden">
-                      <div className="relative h-32 sm:h-36 md:h-40">
-                        <Image
-                          src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
-                          alt={video.description}
-                          fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-300"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        />
-                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center">
-                          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-500 rounded-full flex items-center justify-center">
-                            <Play className="w-4 h-4 sm:w-5 sm:h-5 text-black ml-0.5" />
+                    <a
+                      href={`https://www.youtube.com/watch?v=${video.videoId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div className="relative rounded-lg overflow-hidden">
+                        <div className="relative h-32 sm:h-36 md:h-40">
+                          <Image
+                            src={`https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg`}
+                            alt={video.description}
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-300"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                          />
+                          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+                            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-500 rounded-full flex items-center justify-center">
+                              <Play className="w-4 h-4 sm:w-5 sm:h-5 text-black ml-0.5" />
+                            </div>
                           </div>
                         </div>
+                        <div className="p-3 sm:p-4 bg-gray-900">
+                          <p className="text-sm text-gray-300">{video.description}</p>
+                        </div>
                       </div>
-                      <div className="p-3 sm:p-4 bg-gray-900">
-                        {/* Optional: Add video title here */}
-                      </div>
-                    </div>
-                  </a>
-                </motion.div>
-              ))}
+                    </a>
+                  </motion.div>
+                ))}
             </div>
             
             <div className="text-center mt-8 sm:mt-10 md:mt-12">
               <a
-                href="https://www.youtube.com/@aapkasahyogfoundation"
+                href={homeData.socialMedia.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-all transform hover:-translate-y-0.5 sm:hover:-translate-y-1 text-sm sm:text-base"
@@ -701,44 +785,50 @@ export default function Home() {
                 <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Milestones of <span className="text-yellow-600">Impact</span>
+                {homeData.milestonesTitle}
               </h2>
+              {homeData.milestonesDescription && (
+                <p className="text-gray-600 max-w-3xl mx-auto">{homeData.milestonesDescription}</p>
+              )}
             </motion.div>
             
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-yellow-500/30 hidden md:block"></div>
               
               <div className="space-y-8 sm:space-y-10 md:space-y-12">
-                {achievements.map((achievement, index) => {
-                  const Icon = achievement.icon
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-                    >
-                      <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-6 lg:pr-12' : 'md:pl-6 lg:pl-12'} mb-4 md:mb-0`}>
-                        <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-md sm:shadow-lg border border-gray-200 hover:border-yellow-500 transition-colors">
-                          <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center">
-                              <Icon className="text-yellow-600 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                {homeData.achievements
+                  .filter(achievement => achievement.active)
+                  .sort((a, b) => a.order - b.order)
+                  .map((achievement, index) => {
+                    const Icon = getIconComponent(achievement.icon)
+                    return (
+                      <motion.div
+                        key={achievement.id}
+                        initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                      >
+                        <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-6 lg:pr-12' : 'md:pl-6 lg:pl-12'} mb-4 md:mb-0`}>
+                          <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-md sm:shadow-lg border border-gray-200 hover:border-yellow-500 transition-colors">
+                            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                              <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center">
+                                <Icon className="text-yellow-600 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                              </div>
+                              <div className="text-xl sm:text-2xl font-bold text-gray-900">{achievement.year}</div>
                             </div>
-                            <div className="text-xl sm:text-2xl font-bold text-gray-900">{achievement.year}</div>
+                            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">{achievement.title}</h3>
+                            <p className="text-gray-600 text-sm sm:text-base">{achievement.description}</p>
                           </div>
-                          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">{achievement.title}</h3>
-                          <p className="text-gray-600 text-sm sm:text-base">{achievement.description}</p>
                         </div>
-                      </div>
-                      
-                      <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-yellow-500 rounded-full border-2 sm:border-3 md:border-4 border-white shadow-lg z-10 my-2 md:my-0"></div>
-                      
-                      <div className="w-full md:w-1/2"></div>
-                    </motion.div>
-                  )
-                })}
+                        
+                        <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-yellow-500 rounded-full border-2 sm:border-3 md:border-4 border-white shadow-lg z-10 my-2 md:my-0"></div>
+                        
+                        <div className="w-full md:w-1/2"></div>
+                      </motion.div>
+                    )
+                  })}
               </div>
             </div>
           </div>
@@ -760,41 +850,47 @@ export default function Home() {
                 <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Stories of <span className="text-yellow-400">Transformation</span>
+                {homeData.testimonialsTitle}
               </h2>
+              {homeData.testimonialsDescription && (
+                <p className="text-white/80 max-w-3xl mx-auto">{homeData.testimonialsDescription}</p>
+              )}
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gray-900 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden group p-4 sm:p-6 md:p-8"
-                >
-                  <div className="text-3xl sm:text-4xl text-yellow-500/30 mb-4 sm:mb-6 leading-none">"</div>
-                  <p className="text-white/80 italic mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg">
-                    "{testimonial.text}"
-                  </p>
-                  
-                  <div className="pt-4 sm:pt-6 border-t border-white/10">
-                    <div className="flex flex-col">
-                      <h3 className="text-lg sm:text-xl font-bold text-white">{testimonial.name}</h3>
-                      <div className="flex items-center justify-between mt-1 sm:mt-2">
-                        <div>
-                          <p className="text-yellow-400 text-xs sm:text-sm">{testimonial.role}</p>
-                          <div className="flex items-center gap-1 text-white/60 text-xs sm:text-sm mt-1">
-                            <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
-                            {testimonial.location}
+              {homeData.testimonials
+                .filter(testimonial => testimonial.active)
+                .sort((a, b) => a.order - b.order)
+                .map((testimonial, index) => (
+                  <motion.div
+                    key={testimonial.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-gray-900 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden group p-4 sm:p-6 md:p-8"
+                  >
+                    <div className="text-3xl sm:text-4xl text-yellow-500/30 mb-4 sm:mb-6 leading-none">"</div>
+                    <p className="text-white/80 italic mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg">
+                      "{testimonial.text}"
+                    </p>
+                    
+                    <div className="pt-4 sm:pt-6 border-t border-white/10">
+                      <div className="flex flex-col">
+                        <h3 className="text-lg sm:text-xl font-bold text-white">{testimonial.name}</h3>
+                        <div className="flex items-center justify-between mt-1 sm:mt-2">
+                          <div>
+                            <p className="text-yellow-400 text-xs sm:text-sm">{testimonial.role}</p>
+                            <div className="flex items-center gap-1 text-white/60 text-xs sm:text-sm mt-1">
+                              <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
+                              {testimonial.location}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
             </div>
           </div>
         </section>
@@ -815,27 +911,33 @@ export default function Home() {
                 <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
               </div>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Trusted by Leading Organizations
+                {homeData.partnersTitle}
               </h2>
+              {homeData.partnersDescription && (
+                <p className="text-gray-600">{homeData.partnersDescription}</p>
+              )}
             </motion.div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-              {partners.map((partner, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 md:h-28 lg:h-32 hover:bg-gray-100 transition-colors"
-                >
-                  <div className="text-center">
-                    <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-700">
-                      {partner.name}
+              {homeData.partners
+                .filter(partner => partner.active)
+                .sort((a, b) => a.order - b.order)
+                .map((partner, index) => (
+                  <motion.div
+                    key={partner.id}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 md:h-28 lg:h-32 hover:bg-gray-100 transition-colors"
+                  >
+                    <div className="text-center">
+                      <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-700">
+                        {partner.name}
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
             </div>
           </div>
         </section>
@@ -857,11 +959,11 @@ export default function Home() {
                 </div>
                 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">
-                  Together, We Can Make a Difference
+                  {homeData.ctaSection.title}
                 </h2>
                 
                 <p className="text-black/80 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto font-medium">
-                  Your support enables us to continue our vital work in education, healthcare, environment, and community development.
+                  {homeData.ctaSection.description}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-10 md:mb-12">
@@ -870,7 +972,7 @@ export default function Home() {
                     className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-black text-white rounded-lg sm:rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 transform hover:-translate-y-0.5 sm:hover:-translate-y-1 hover:shadow-lg sm:hover:shadow-2xl text-sm sm:text-base w-full sm:w-auto"
                   >
                     <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span>Make a Donation</span>
+                    <span>{homeData.ctaSection.donationText}</span>
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
@@ -878,23 +980,17 @@ export default function Home() {
                     className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-white/20 text-black rounded-lg sm:rounded-xl font-semibold hover:bg-white/30 transition-all duration-300 backdrop-blur-sm border border-black/10 text-sm sm:text-base w-full sm:w-auto"
                   >
                     <Users className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span>Become a Volunteer</span>
+                    <span>{homeData.ctaSection.volunteerText}</span>
                   </Link>
                 </div>
                 
                 <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-2xl mx-auto">
-                  <div className="text-center">
-                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-black">100%</div>
-                    <div className="text-xs sm:text-sm text-black/70">Transparent</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-black">45+</div>
-                    <div className="text-xs sm:text-sm text-black/70">Objectives</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-black">24/7</div>
-                    <div className="text-xs sm:text-sm text-black/70">Support</div>
-                  </div>
+                  {homeData.ctaSection.stats.map((stat, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-xl sm:text-2xl md:text-3xl font-bold text-black">{stat.value}</div>
+                      <div className="text-xs sm:text-sm text-black/70">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
               
@@ -914,16 +1010,25 @@ export default function Home() {
                 <p className="text-white/70 text-sm sm:text-base">Stay updated with our latest work and impact stories</p>
               </div>
               <div className="flex gap-2 sm:gap-3 md:gap-4">
-                <a href="https://youtube.com/@aapkasahyogfoundation?si=grYCLhqeIoBHVOSc" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="YouTube">
+                <a href={homeData.socialMedia.youtube} target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="YouTube">
                   <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="https://www.facebook.com/share/1SpxhPXM8r/" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Facebook">
+                <a href={homeData.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Facebook">
                   <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="https://www.instagram.com/aapkasahyogfoundation?igsh=ZzRhbjZ6dWVkYm1p" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Instagram">
+                <a href={homeData.socialMedia.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Instagram">
                   <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-               
+                {homeData.socialMedia.twitter && (
+                  <a href={homeData.socialMedia.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Twitter">
+                    <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </a>
+                )}
+                {homeData.socialMedia.linkedin && (
+                  <a href={homeData.socialMedia.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="LinkedIn">
+                    <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </a>
+                )}
               </div>
             </div>
           </div>

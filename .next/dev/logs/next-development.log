@@ -1,26 +1,8 @@
-[00:00:03.008] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:03.550] Server  LOG      ✓ Ready in 2.6s
-[00:05:17.608] Server  LOG      ○ Compiling / ...
-[00:05:25.325] Browser LOG     Fetching banners from Firestore...
-[00:05:25.325] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:05:25.325] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:05:25.326] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766941451688}
-[00:05:27.139] Browser LOG     Found 0 banners
-[00:05:27.139] Browser LOG     ✅ 0 active banners loaded successfully
-[00:05:27.139] Browser LOG     No active banners found, using fallback
-[00:05:27.139] Browser LOG     Fetching banners from Firestore...
-[00:05:27.139] Browser LOG     Found 0 banners
-[00:05:27.139] Browser LOG     ✅ 0 active banners loaded successfully
-[00:05:27.139] Browser LOG     No active banners found, using fallback
-[00:05:53.403] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766941479768}
-[00:22:11.105] Server  LOG      ✓ Compiled in 258ms
-[00:32:15.196] Browser WARN    Image with src "/images/asf-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:32:40.641] Browser LOG     Loading team members from Firestore...
-[00:32:40.641] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:32:40.641] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
-[00:32:40.641] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766943087008}
-[00:32:41.509] Browser LOG     ✅ Loaded 44 team members
-[00:32:41.509] Browser LOG     Loading menu items from Firestore...
-[00:32:41.509] Browser LOG     ✅ Loaded 10 menu items
-[00:32:41.509] Browser LOG     🔄 Setting up Firestore real-time listener...
-[00:32:41.509] Browser LOG     🔄 Setting up menu items real-time listener...
+[00:00:04.016] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:04.805] Server  LOG      ✓ Ready in 3.6s
+[00:00:08.028] Server  LOG      ○ Compiling / ...
+[00:00:18.303] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:18.303] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:18.303] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767708332770}
+[00:00:30.972] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767708345413}
+[00:00:33.954] Browser WARN    Image with src "/images/asf-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
